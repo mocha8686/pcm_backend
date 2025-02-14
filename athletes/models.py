@@ -30,7 +30,7 @@ class Sport(models.Model):
 
 class SportStat(models.Model):
     sport = models.ForeignKey(
-        Sport, related_name="sport_stats", on_delete=models.CASCADE
+        Sport, related_name="stats", on_delete=models.CASCADE
     )
     header = models.CharField(max_length=32)
     body = models.TextField()
