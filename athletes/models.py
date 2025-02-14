@@ -28,8 +28,10 @@ class Sport(models.Model):
         return self.name
 
 
-class SportStats(models.Model):
-    sport = models.ForeignKey(Sport, on_delete=models.CASCADE)
+class SportStat(models.Model):
+    sport = models.ForeignKey(
+        Sport, related_name="sport_stats", on_delete=models.CASCADE
+    )
     header = models.CharField(max_length=32)
     body = models.TextField()
 
