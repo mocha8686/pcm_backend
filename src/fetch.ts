@@ -2,7 +2,7 @@ type Fetch = typeof fetch;
 
 function wrapFetch(fetch: Fetch, baseURL: string): Fetch {
 	return (url, ...params) => {
-		if (url.toString().startsWith("/")) return fetch(baseURL + url, ...params);
+		if (url.toString().startsWith('/')) return fetch(baseURL + url, ...params);
 		else return fetch(url, ...params);
 	};
 }
