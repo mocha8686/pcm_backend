@@ -16,7 +16,7 @@ if (root) {
 		<StrictMode>
 			<BrowserRouter>
 				<Routes>
-					<Route index element={<Home/>} />
+					<Route index element={<Home />} />
 				</Routes>
 			</BrowserRouter>
 		</StrictMode>,
