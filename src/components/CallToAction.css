@@ -1,23 +1,19 @@
 .call-to-action {
 	display: inline-flex;
 	flex-direction: row;
-	justify-content: center;
-	align-items: center;
 	gap: 0.5rem;
+	align-items: center;
+	justify-content: center;
+
 	padding: 0.25rem 0.75rem;
 	border-radius: 2rem;
-	background-color: var(--cl-accent);
-	text-decoration: none;
-	box-shadow:
-		0px 4px 4px 0px rgba(0, 0, 0, 0.25),
-		0px -4px 4px 0px rgba(0, 0, 0, 0.25),
-		4px 0px 4px 0px rgba(0, 0, 0, 0.25),
-		-4px 0px 4px 0px rgba(0, 0, 0, 0.25);
 
+	font-variant: small-caps;
 	color: inherit;
 	text-align: center;
-	font-variant: small-caps;
-	/* color: #000; */
-	/* font-family: Playfair; */
-	/* font-size: 16px; */
+	text-decoration: none;
+
+	background-color: var(--cl-accent);
+	box-shadow: 0 4px 4px 0 rgb(0 0 0 / 25%), 0 -4px 4px 0 rgb(0 0 0 / 25%), 4px 0
+		4px 0 rgb(0 0 0 / 25%), -4px 0 4px 0 rgb(0 0 0 / 25%);
 }
