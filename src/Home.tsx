@@ -1,5 +1,5 @@
 import './Home.css';
-import CallToAction from './components/CallToAction.tsx';
+import CallToAction from '$lib/components/CallToAction';
 
 export default function Home() {
 	return (
