@@ -2,9 +2,11 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import 'normalize.css/normalize.css';
-import Home from './Home.tsx';
 import { BrowserRouter, Route, Routes } from 'react-router';
+import Home from './Home.tsx';
+import Layout from './Layout.tsx';
 import { setupFetch } from './fetch.ts';
+import Components from './Components.tsx';
 
 // TODO: get url from .env.development or .env.production
 setupFetch(fetch, 'http://localhost:8000');
@@ -16,7 +18,10 @@ if (root) {
 		<StrictMode>
 			<BrowserRouter>
 				<Routes>
-					<Route index element={<Home />} />
+					<Route element={<Layout />}>
+						<Route index element={<Home />} />
+						<Route path='/components' element={<Components />} />
+					</Route>
 				</Routes>
 			</BrowserRouter>
 		</StrictMode>,
