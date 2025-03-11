@@ -17,7 +17,7 @@ export default function CallToAction({
 	const iconProps = typeof icon === 'string' ? { icon } : icon;
 
 	return (
-		<Link className={`${className} call-to-action`} {...props}>
+		<Link className={`${className} CallToAction`} {...props}>
 			{/* @ts-expect-error Icon uses an internal interface for its props which is compatible with this one, but we can't access it */}
 			<Icon {...iconProps} />
 			{children}

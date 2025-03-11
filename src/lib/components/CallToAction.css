@@ -1,4 +1,4 @@
-.call-to-action {
+.CallToAction {
 	display: inline-flex;
 	flex-direction: row;
 	gap: 0.5rem;
@@ -9,11 +9,10 @@
 	border-radius: 2rem;
 
 	font-variant: small-caps;
-	color: inherit;
+	color: var(--cl-background);
 	text-align: center;
 	text-decoration: none;
 
 	background-color: var(--cl-accent);
-	box-shadow: 0 4px 4px 0 rgb(0 0 0 / 25%), 0 -4px 4px 0 rgb(0 0 0 / 25%), 4px 0
-		4px 0 rgb(0 0 0 / 25%), -4px 0 4px 0 rgb(0 0 0 / 25%);
+	box-shadow: 0 4px 4px 0 rgb(0 0 0 / 25%), 0 -4px 4px 0 rgb(0 0 0 / 25%), 4px 0 4px 0 rgb(0 0 0 / 25%), -4px 0 4px 0 rgb(0 0 0 / 25%);
 }

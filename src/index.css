@@ -1,3 +1,26 @@
+/* stylelint-disable plugin/selector-bem-pattern */
+
 :root {
-	--cl-accent: hsl(41 100% 82% / 100%);
+	--cl-accent: hsl(41deg 100% 82% / 100%);
+	--cl-background: hsl(228deg 9% 11% / 100%);
+	--cl-nav-background: hsl(228deg 9% 16% / 100%);
+	--cl-foreground: #fff;
+	--ff-header: "Libre Bodoni Variable", serif;
+	--ff-body: "Faustina Variable", serif;
+	--ff-accent: var(--ff-header);
+}
+
+body {
+	font-family: var(--ff-body);
+	color: var(--cl-foreground);
+	background-color: var(--cl-background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--ff-header);
 }

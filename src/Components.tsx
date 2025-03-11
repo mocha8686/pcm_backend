@@ -8,7 +8,8 @@ export default function Components() {
 			<CallToAction to='#' className='test' icon='tabler:mail-fast'>
 				Contact Us
 			</CallToAction>
-			<Link to="/">Go to home</Link>
+
+			<Link to='/'>Go to home</Link>
 		</>
-	)
+	);
 }

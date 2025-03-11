@@ -1,0 +1,51 @@
+.Navbar {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	justify-content: space-between;
+
+	max-height: 4rem;
+	margin-block-end: 1rem;
+
+	background-color: var(--cl-nav-background);
+}
+
+.Navbar-logo {
+	justify-self: flex-start;
+	max-width: 4rem;
+}
+
+.Navbar-logoImage {
+	aspect-ratio: 1;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.Navbar-links {
+	display: flex;
+	flex-direction: row;
+
+	margin: 0;
+	padding: 0;
+
+	list-style-type: none;
+}
+
+.Navbar-item {
+	display: contents;
+}
+
+.Navbar-link {
+	align-content: center;
+
+	padding-inline: 1rem;
+
+	font-family: var(--ff-accent);
+	color: var(--cl-accent);
+	text-decoration: none;
+}
+
+.Navbar-link.active {
+	color: var(--cl-background);
+	background-color: var(--cl-accent);
+}
