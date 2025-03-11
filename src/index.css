@@ -16,7 +16,8 @@
 
 	--fs-secondary: 0.85rem;
 	--fs-icon: 2rem;
-	--fs-icon-inline: 1.5rem;
+	--fs-icon-secondary: 1.5rem;
+	--fs-icon-inline: 1.25rem;
 	--fs-cta: 1.25rem;
 	--fs-placeholder: var(--fs-secondary);
 	--fs-copyright: var(--fs-secondary);
