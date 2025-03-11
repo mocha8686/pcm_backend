@@ -19,7 +19,7 @@ export default function CallToAction({
 	return (
 		<Link className={`${className} CallToAction`} {...props}>
 			{/* @ts-expect-error Icon uses an internal interface for its props which is compatible with this one, but we can't access it */}
-			<Icon {...iconProps} />
+			<Icon className="CallToAction-icon" {...iconProps} />
 			{children}
 		</Link>
 	);
