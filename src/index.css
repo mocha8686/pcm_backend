@@ -15,6 +15,7 @@
 	--ff-accent: var(--ff-header);
 
 	--fs-icon: 2rem;
+	--fs-icon-inline: 1.5rem;
 	--fs-placeholder: 0.85rem;
 	--fs-cta: 1.25rem;
 
@@ -22,6 +23,7 @@
 
 	--fx-full-drop:
 		0px 4px 4px 0px rgb(0 0 0 / 25%), 0px -4px 4px 0px rgb(0 0 0 / 25%), 4px 0px 4px 0px rgb(0 0 0 / 25%), -4px 0px 4px 0px rgb(0 0 0 / 25%);
+	--fx-vertical-inner: 0px -4px 4px 0px rgb(0 0 0 / 25%) inset, 0px 4px 4px 0px rgb(0 0 0 / 25%) inset;
 
 	--z-navbar: 1000;
 }
