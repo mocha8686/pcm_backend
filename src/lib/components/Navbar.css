@@ -4,15 +4,17 @@
 	position: sticky;
 	inset-block-start: 0;
 
+	container-name: navbar;
+	container-type: inline-size;
 	overflow-x: clip;
 	display: flex;
 	flex-direction: row;
-	align-items: center;
+	align-items: stretch;
 	justify-content: space-between;
 
 	max-height: var(--height);
 	margin-block-end: 1rem;
-	padding-inline-end: 1rem;
+	padding-inline: 0 1rem;
 
 	background-color: var(--cl-nav-background);
 }
@@ -29,6 +31,7 @@
 }
 
 .Navbar-expand {
+	place-self: center;
 	font-size: var(--fs-icon);
 	color: var(--cl-accent);
 }
@@ -72,9 +75,40 @@
 	color: var(--cl-accent);
 	text-align: center;
 	text-decoration: none;
+
+	transition: all 75ms ease;
 }
 
-.Navbar-link.active {
+.Navbar-link.active,
+.Navbar-link:hover {
 	color: var(--cl-background);
 	background-color: var(--cl-accent);
+}
+
+.Navbar-link:hover {
+	filter: brightness(105%);
+}
+
+@container navbar (width > 500px) {
+	.Navbar-expand {
+		display: none;
+	}
+
+	.Navbar-links {
+		position: static;
+		translate: 0;
+
+		flex-direction: row;
+		gap: 0.5rem;
+		align-items: stretch;
+		justify-content: flex-end;
+
+		height: unset;
+
+		background-color: unset;
+	}
+
+	.Navbar-link {
+		padding: 0 0.5rem;
+	}
 }
