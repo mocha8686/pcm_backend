@@ -1,12 +1,10 @@
-import { Icon, type IconifyIconProps } from '@iconify/react';
 import type React from 'react';
 import './CallToAction.css';
 import { Link, type LinkProps } from 'react-router';
 import clsx from 'clsx';
+import Icon, { type IconProps } from './Icon';
 
-interface CallToActionProps {
-	icon: string | IconifyIconProps;
-}
+type CallToActionProps = IconProps;
 
 export default function CallToAction({
 	icon,
@@ -15,12 +13,9 @@ export default function CallToAction({
 	ctaType = 'a',
 	...componentProps
 }: React.PropsWithChildren<CallToActionExtendProps>) {
-	const iconProps = typeof icon === 'string' ? { icon } : icon;
-
 	const contents = (
 		<>
-			{/* @ts-expect-error Icon uses an internal interface for its props (though IconifyIconProps is compatible with it) */}
-			<Icon className='CallToAction-icon' {...iconProps} />
+			<Icon className='CallToAction-icon' icon={icon} />
 			{children}
 		</>
 	);
