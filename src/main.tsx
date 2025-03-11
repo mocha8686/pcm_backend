@@ -19,6 +19,7 @@ import Components from './Components.tsx';
 import About from './About.tsx';
 import Athletes from './Athletes.tsx';
 import Contact from './Contact.tsx';
+import ScrollToTop from './lib/components/ScrollToTop.tsx';
 
 // TODO: get url from .env.development or .env.production
 setupFetch(fetch, 'http://localhost:8000');
@@ -29,6 +30,7 @@ if (root) {
 	createRoot(root).render(
 		<StrictMode>
 			<BrowserRouter>
+				<ScrollToTop />
 				<Routes>
 					<Route element={<Layout />}>
 						<Route index element={<Home />} />
