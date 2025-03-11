@@ -1,3 +1,4 @@
+/* stylelint-disable custom-property-empty-line-before */
 /* stylelint-disable plugin/selector-bem-pattern */
 
 :root {
@@ -7,10 +8,20 @@
 	--cl-drop: hsl(228deg 9% 9% / 100%);
 	--cl-nav-background: hsl(228deg 9% 16% / 100%);
 	--cl-foreground: #fff;
+
 	--ff-header: "Libre Bodoni Variable", serif;
 	--ff-body: "Faustina Variable", serif;
+	--ff-cta: "Playfair Variable", serif;
 	--ff-accent: var(--ff-header);
+
 	--fs-icon: 2rem;
+	--fs-placeholder: 0.85rem;
+	--fs-cta: 1.25rem;
+
+	--fw-header: 400;
+
+	--fx-full-drop:
+		0px 4px 4px 0px rgb(0 0 0 / 25%), 0px -4px 4px 0px rgb(0 0 0 / 25%), 4px 0px 4px 0px rgb(0 0 0 / 25%), -4px 0px 4px 0px rgb(0 0 0 / 25%);
 }
 
 body {
@@ -33,4 +44,13 @@ h4,
 h5,
 h6 {
 	font-family: var(--ff-header);
+	font-weight: var(--fw-header);
+	color: var(--cl-accent);
+}
+
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+a:focus-visible {
+	outline-color: var(--cl-accent);
 }

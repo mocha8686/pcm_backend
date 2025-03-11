@@ -1,0 +1,73 @@
+.Footer {
+	display: grid;
+	grid-auto-rows: min-content;
+	grid-template-columns: 1fr;
+	align-items: stretch;
+}
+
+.Footer-hr {
+	width: clamp(6rem, 60% + 4rem, 18rem);
+	margin: 6rem auto;
+	border-color: var(--cl-accent);
+	filter: brightness(150%);
+}
+
+.Footer-content {
+	display: grid;
+	grid-auto-rows: min-content;
+	grid-template-columns: 1fr;
+	gap: 3rem;
+
+	padding-block: 1rem 4rem;
+	padding-inline: 3rem;
+
+	background-color: var(--cl-drop);
+	box-shadow: var(--fx-vertical-inner);
+}
+
+.Footer-logo {
+	display: block;
+	place-self: center;
+	max-width: 6rem;
+}
+
+.Footer-logoImage {
+	aspect-ratio: 1;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.ContactForm {
+	display: grid;
+	grid-auto-rows: min-content;
+	grid-template-rows: min-content 1fr;
+	gap: 1rem;
+	place-items: center;
+}
+
+.ContactForm-header,
+.ContactForm-submit {
+	grid-column: 1 / 3;
+}
+
+.ContactForm-label {
+	place-self: start;
+	font-style: italic;
+}
+
+.ContactForm-input {
+	place-self: stretch;
+
+	padding: 0.5rem;
+	border: none;
+
+	font-size: var(--fs-placeholder);
+	color: var(--cl-foreground);
+
+	background-color: var(--cl-raise);
+	box-shadow: var(--fx-full-drop);
+}
+
+.ContactForm-submit {
+	max-width: 10rem;
+}

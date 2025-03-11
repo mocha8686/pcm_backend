@@ -6,15 +6,18 @@
 	justify-content: center;
 
 	padding: 0.25rem 0.75rem;
+	border: none;
 	border-radius: 2rem;
 
+	font-family: var(--ff-cta);
+	font-size: var(--fs-cta);
 	font-variant: small-caps;
 	color: var(--cl-background);
 	text-align: center;
 	text-decoration: none;
 
 	background-color: var(--cl-accent);
-	box-shadow: 0 4px 4px 0 rgb(0 0 0 / 25%), 0 -4px 4px 0 rgb(0 0 0 / 25%), 4px 0 4px 0 rgb(0 0 0 / 25%), -4px 0 4px 0 rgb(0 0 0 / 25%);
+	box-shadow: var(--fx-full-drop);
 }
 
 .CallToAction-icon {

@@ -17,6 +17,7 @@
 	"dependencies": {
 		"@fontsource-variable/faustina": "^5.2.5",
 		"@fontsource-variable/libre-bodoni": "^5.2.5",
+		"@fontsource-variable/playfair": "^5.2.5",
 		"@iconify/react": "^5.2.0",
 		"clsx": "^2.1.1",
 		"normalize.css": "^8.0.1",

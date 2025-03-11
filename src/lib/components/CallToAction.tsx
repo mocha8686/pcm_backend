@@ -1,11 +1,10 @@
 import { Icon, type IconifyIconProps } from '@iconify/react';
 import type React from 'react';
 import './CallToAction.css';
-import { Link } from 'react-router';
+import { Link, type LinkProps } from 'react-router';
 import clsx from 'clsx';
 
-export interface CallToActionProps
-	extends React.ComponentPropsWithoutRef<typeof Link> {
+interface CallToActionProps {
 	icon: string | IconifyIconProps;
 }
 
@@ -13,15 +12,57 @@ export default function CallToAction({
 	icon,
 	children,
 	className,
-	...props
-}: CallToActionProps) {
+	ctaType = 'a',
+	...componentProps
+}: React.PropsWithChildren<CallToActionExtendProps>) {
 	const iconProps = typeof icon === 'string' ? { icon } : icon;
 
-	return (
-		<Link className={clsx(className, 'CallToAction')} {...props}>
-			{/* @ts-expect-error Icon uses an internal interface for its props which is compatible with this one, but we can't access it */}
+	const contents = (
+		<>
+			{/* @ts-expect-error Icon uses an internal interface for its props (though IconifyIconProps is compatible with it) */}
 			<Icon className='CallToAction-icon' {...iconProps} />
 			{children}
-		</Link>
+		</>
 	);
+
+	const classes = clsx(className, 'CallToAction');
+
+	if (isButtonProps(ctaType, componentProps)) {
+		return (
+			<button className={classes} {...componentProps}>
+				{contents}
+			</button>
+		);
+	}
+
+	if (isAnchorProps(ctaType, componentProps)) {
+		return (
+			<Link className={classes} {...componentProps}>
+				{contents}
+			</Link>
+		);
+	}
 }
+
+function isButtonProps(
+	ctaType: 'button' | 'a' | undefined,
+	props: CallToActionButtonProps | CallToActionAnchorProps,
+): props is CallToActionButtonProps {
+	return (ctaType && ctaType === 'button') || false;
+}
+
+function isAnchorProps(
+	ctaType: 'button' | 'a' | undefined,
+	props: CallToActionButtonProps | CallToActionAnchorProps,
+): props is CallToActionAnchorProps {
+	return !ctaType || ctaType === 'a';
+}
+
+type CallToActionButtonProps = React.ComponentPropsWithoutRef<'button'>;
+type CallToActionAnchorProps = LinkProps & { to: string };
+
+export type CallToActionExtendProps = CallToActionProps &
+	(
+		| ({ ctaType: 'button' } & CallToActionButtonProps)
+		| ({ ctaType?: 'a' } & CallToActionAnchorProps)
+	);

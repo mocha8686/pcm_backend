@@ -4,6 +4,9 @@ import '@fontsource-variable/libre-bodoni';
 // @ts-expect-error Fontsource packages don't have types
 import '@fontsource-variable/faustina';
 
+// @ts-expect-error Fontsource packages don't have types
+import '@fontsource-variable/playfair';
+
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
