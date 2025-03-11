@@ -1,0 +1,34 @@
+.ContactForm {
+	display: grid;
+	grid-auto-rows: min-content;
+	grid-template-rows: min-content 1fr;
+	gap: 1rem;
+	place-items: center;
+}
+
+.ContactForm-header,
+.ContactForm-submit {
+	grid-column: 1 / 3;
+}
+
+.ContactForm-label {
+	place-self: start;
+	font-style: italic;
+}
+
+.ContactForm-input {
+	place-self: stretch;
+
+	padding: 0.5rem;
+	border: none;
+
+	font-size: var(--fs-placeholder);
+	color: var(--cl-foreground);
+
+	background-color: var(--cl-raise);
+	box-shadow: var(--fx-full-drop);
+}
+
+.ContactForm-submit {
+	max-width: 10rem;
+}
