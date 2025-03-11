@@ -2,6 +2,7 @@
 	--height: 4rem;
 
 	position: sticky;
+	z-index: var(--z-navbar);
 	inset-block-start: 0;
 
 	container-name: navbar;
