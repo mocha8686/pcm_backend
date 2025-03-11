@@ -1,0 +1,36 @@
+.FooterNav {
+	display: grid;
+	grid-auto-rows: min-content;
+	grid-template-columns: 1fr 1fr;
+}
+
+.FooterNav-header {
+	grid-column: 1 / 3;
+	text-align: center;
+}
+
+.FooterNav-site,
+.FooterNav-legal {
+	display: flex;
+	flex-direction: column;
+	gap: 0.625rem;
+
+	margin: 0;
+	padding: 0;
+
+	list-style-type: none;
+}
+
+.FooterNav-item {
+	display: contents;
+}
+
+.FooterNav-icon {
+	color: var(--cl-accent);
+}
+
+.FooterNav-link {
+	font-family: var(--ff-accent);
+	color: inherit;
+	text-decoration: none;
+}

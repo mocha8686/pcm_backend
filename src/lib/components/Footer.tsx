@@ -3,6 +3,7 @@ import logo from '$lib/assets/pcm_white_accent.jpg';
 import { Link } from 'react-router';
 import ContactForm from './ContactForm';
 import ContactInfo from './ContactInfo';
+import FooterNav from './FooterNav';
 
 export default function Footer() {
 	return (
@@ -21,6 +22,8 @@ export default function Footer() {
 					<ContactForm />
 
 					<ContactInfo />
+
+					<FooterNav />
 				</section>
 			</footer>
 		</>
