@@ -14,10 +14,12 @@
 	--ff-cta: "Playfair Variable", serif;
 	--ff-accent: var(--ff-header);
 
+	--fs-secondary: 0.85rem;
 	--fs-icon: 2rem;
 	--fs-icon-inline: 1.5rem;
-	--fs-placeholder: 0.85rem;
 	--fs-cta: 1.25rem;
+	--fs-placeholder: var(--fs-secondary);
+	--fs-copyright: var(--fs-secondary);
 
 	--fw-header: 400;
 

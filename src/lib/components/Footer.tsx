@@ -24,6 +24,8 @@ export default function Footer() {
 					<ContactInfo />
 
 					<FooterNav />
+
+					<p className="Footer-copyright">© 2025 Players Club Management</p>
 				</section>
 			</footer>
 		</>
