@@ -1,21 +1,25 @@
 .Navbar {
+	--height: 4rem;
+
 	position: sticky;
 	inset-block-start: 0;
 
+	overflow-x: clip;
 	display: flex;
 	flex-direction: row;
-	align-items: stretch;
+	align-items: center;
 	justify-content: space-between;
 
-	max-height: 4rem;
+	max-height: var(--height);
 	margin-block-end: 1rem;
+	padding-inline-end: 1rem;
 
 	background-color: var(--cl-nav-background);
 }
 
 .Navbar-logo {
 	justify-self: flex-start;
-	max-width: 4rem;
+	max-width: var(--height);
 }
 
 .Navbar-logoImage {
@@ -24,14 +28,35 @@
 	max-height: 100%;
 }
 
-.Navbar-links {
-	display: flex;
-	flex-direction: row;
+.Navbar-expand {
+	font-size: var(--fs-icon);
+	color: var(--cl-accent);
+}
 
+.Navbar-links {
+	position: absolute;
+	inset-block-start: var(--height);
+	translate: 100% 0;
+
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	align-items: stretch;
+
+	width: 100%;
+	height: calc(100svh - var(--height));
 	margin: 0;
 	padding: 0;
 
 	list-style-type: none;
+
+	background-color: var(--cl-raise);
+
+	transition: translate 200ms ease-in;
+}
+
+.Navbar-links.is-expanded {
+	translate: 0;
 }
 
 .Navbar-item {
@@ -41,10 +66,11 @@
 .Navbar-link {
 	align-content: center;
 
-	padding-inline: 1rem;
+	padding: 0.5rem 0;
 
 	font-family: var(--ff-accent);
 	color: var(--cl-accent);
+	text-align: center;
 	text-decoration: none;
 }
 
