@@ -1,8 +1,12 @@
 .ContactForm {
 	display: grid;
 	grid-auto-rows: min-content;
-	grid-template-rows: min-content 1fr;
-	gap: 1rem;
+	grid-template-columns: min-content 1fr;
+	gap: 1rem 3rem;
+	place-self: center;
+
+	width: 100%;
+	max-width: 32rem;
 }
 
 .ContactForm-header,
@@ -34,4 +38,10 @@
 
 .ContactForm-submit {
 	place-self: center;
+}
+
+@container footer (width > 500px) {
+	.ContactForm {
+		grid-area: form;
+	}
 }

@@ -1,7 +1,8 @@
 .Footer {
-	display: grid;
-	grid-auto-rows: min-content;
-	grid-template-columns: 1fr;
+	container-name: footer;
+	container-type: inline-size;
+	display: flex;
+	flex-direction: column;
 	align-items: stretch;
 
 	box-shadow: var(--fx-vertical-inner);
@@ -18,7 +19,7 @@
 	display: grid;
 	grid-auto-rows: min-content;
 	grid-template-columns: 1fr;
-	gap: 3rem;
+	gap: 2rem 1rem;
 
 	padding: 1rem 3rem;
 
@@ -29,7 +30,7 @@
 .Footer-logo {
 	display: block;
 	place-self: center;
-	max-width: 6rem;
+	max-width: 8rem;
 }
 
 .Footer-logoImage {
@@ -41,4 +42,23 @@
 .Footer-copyright {
 	font-size: var(--fs-copyright);
 	text-align: center;
+}
+
+@container footer (width > 500px) {
+	.Footer-content {
+		grid-template:
+			"logo info nav" auto
+			"form form form" auto
+			"copyright copyright copyright" auto / auto 1fr 1fr;
+		padding-block: 2rem;
+	}
+
+	.Footer-logo {
+		grid-area: logo;
+		margin-inline: 8rem;
+	}
+
+	.Footer-copyright {
+		grid-area: copyright;
+	}
 }
