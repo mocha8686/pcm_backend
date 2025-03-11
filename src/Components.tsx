@@ -1,4 +1,3 @@
-import './Components.css';
 import CallToAction from '$lib/components/CallToAction';
 import { Link } from 'react-router';
 
