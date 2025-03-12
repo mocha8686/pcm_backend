@@ -23,17 +23,11 @@ export default function QuestionAnswer({
 			const collapsedHeight = ref.current.clientHeight;
 			const expandedHeight = answerRef.current.clientHeight + collapsedHeight;
 
-			// HACK: graaAAAAAAHHHHHHHHH
-			// there might be a better way to adjust the heights
-			// for padding instead of adding random constants?
 			ref.current.style.setProperty(
 				'--collapsed-height',
-				`${collapsedHeight + 4}px`,
+				`${collapsedHeight}px`,
 			);
-			ref.current.style.setProperty(
-				'--expanded-height',
-				`${expandedHeight + 16}px`,
-			);
+			ref.current.style.setProperty('--expanded-height', `${expandedHeight}px`);
 		}
 	}, []);
 

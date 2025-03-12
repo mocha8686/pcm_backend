@@ -15,7 +15,7 @@
 
 	width: 100%;
 	max-width: 20rem;
-	height: var(--collapsed-height);
+	height: calc(var(--collapsed-height) + 2 * var(--border-width));
 	padding: var(--padding-block) var(--padding-inline);
 	border-block-start: var(--border);
 	border-inline: none;
@@ -33,7 +33,7 @@
 }
 
 .QuestionAnswer.is-expanded {
-	height: calc(var(--expanded-height) + var(--padding-block));
+	height: calc(var(--expanded-height) + 2 * var(--padding-block));
 }
 
 .QuestionAnswer-question {
