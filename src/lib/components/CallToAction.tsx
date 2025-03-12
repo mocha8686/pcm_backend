@@ -13,6 +13,7 @@ export default function CallToAction({
 	ctaType = 'a',
 	...componentProps
 }: React.PropsWithChildren<CallToActionExtendProps>) {
+	// TODO: make it glow on hover/focus
 	const contents = (
 		<>
 			<Icon className='CallToAction-icon' icon={icon} />

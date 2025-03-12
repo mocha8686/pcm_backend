@@ -1,20 +1,27 @@
 import './QuestionAnswer.css';
 import clsx from 'clsx';
 import type React from 'react';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import Icon from './Icon';
 
 export interface QuestionAnswerProps {
 	question: string;
 	last?: boolean;
+	open: boolean;
+	onClick: OnClick;
+	className: string;
 }
+
+type OnClick = React.ComponentPropsWithoutRef<'button'>['onClick'];
 
 export default function QuestionAnswer({
 	question,
 	children,
+	open,
+	onClick,
+	className,
 	last = false,
 }: React.PropsWithChildren<QuestionAnswerProps>) {
-	const [show, setShow] = useState(false);
 	const ref: ElementRef<HTMLButtonElement> = useRef(null);
 	const answerRef: ElementRef<HTMLDivElement> = useRef(null);
 
@@ -31,23 +38,22 @@ export default function QuestionAnswer({
 		}
 	}, []);
 
-	const toggle = () => setShow(!show);
-
 	return (
 		<button
 			className={clsx(
 				'QuestionAnswer',
-				show && 'is-expanded',
+				className,
+				open && 'is-expanded',
 				last && 'QuestionAnswer--last',
 			)}
 			type='button'
-			onClick={toggle}
+			onClick={onClick}
 			ref={ref}
 		>
 			<div className='QuestionAnswer-question'>
 				{question}
 				<Icon
-					className={clsx('QuestionAnswer-icon', show && 'is-enabled')}
+					className={clsx('QuestionAnswer-icon', open && 'is-enabled')}
 					icon='tabler:square-plus'
 				/>
 			</div>
