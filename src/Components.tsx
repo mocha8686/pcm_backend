@@ -12,7 +12,7 @@ export default function Components() {
 	];
 
 	return (
-		<>
+		<div style={{ padding: '1rem' }}>
 			<CallToAction to='#' className='test' icon='tabler:mail-fast'>
 				Contact Us
 			</CallToAction>
@@ -20,6 +20,6 @@ export default function Components() {
 			<Link to='/'>Go to home</Link>
 
 			<QuestionAnswerList list={questionAnswers} />
-		</>
+		</div>
 	);
 }
