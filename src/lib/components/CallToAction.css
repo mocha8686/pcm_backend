@@ -17,7 +17,7 @@
 	text-decoration: none;
 
 	background-color: var(--cl-accent);
-	box-shadow: var(--fx-full-drop);
+	box-shadow: var(--bs-full-drop);
 }
 
 .CallToAction-icon {

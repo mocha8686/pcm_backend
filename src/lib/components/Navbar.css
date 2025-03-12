@@ -103,7 +103,7 @@
 }
 
 .Navbar-link:hover {
-	filter: brightness(105%);
+	filter: var(--fx-link-hover);
 }
 
 @container navbar (width > 500px) {

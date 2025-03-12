@@ -22,7 +22,7 @@
 	padding: 1rem 3rem;
 
 	background-color: var(--cl-drop);
-	box-shadow: var(--fx-vertical-inner);
+	box-shadow: var(--bs-vertical-inner);
 }
 
 .Footer-logo {

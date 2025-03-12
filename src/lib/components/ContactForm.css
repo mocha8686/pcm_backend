@@ -27,13 +27,15 @@
 	place-self: stretch;
 
 	padding: 0.5rem;
-	border: none;
 
 	font-size: var(--fs-placeholder);
-	color: var(--cl-foreground);
 
 	background-color: var(--cl-raise);
-	box-shadow: var(--fx-full-drop);
+	box-shadow: var(--bs-full-drop);
+}
+
+.ContactForm-input--textarea {
+	resize: none;
 }
 
 .ContactForm-submit {

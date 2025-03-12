@@ -7,7 +7,7 @@
 	padding: 1rem;
 
 	background-color: var(--cl-raise);
-	box-shadow: var(--fx-full-drop);
+	box-shadow: var(--bs-full-drop);
 }
 
 .StatCard-stats {

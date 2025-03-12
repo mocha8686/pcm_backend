@@ -57,7 +57,12 @@ export default function QuestionAnswer({
 					icon='tabler:square-plus'
 				/>
 			</div>
-			<div className='QuestionAnswer-answer' ref={answerRef}>
+			<div
+				className='QuestionAnswer-answer'
+				onClick={e => e.stopPropagation()}
+				onKeyDown={e => e.stopPropagation()}
+				ref={answerRef}
+			>
 				{children}
 			</div>
 		</button>

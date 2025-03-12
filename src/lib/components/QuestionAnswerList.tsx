@@ -48,7 +48,7 @@ function QuestionAnswers({ className }: QuestionAnswersProps) {
 						last={i + 1 === questionAnswers.length}
 						className={className ?? ''}
 					>
-						<p>{qa.answer}</p>
+						{qa.answer}
 					</QuestionAnswerEl>
 				</li>
 			))}
