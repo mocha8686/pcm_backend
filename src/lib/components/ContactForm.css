@@ -40,7 +40,7 @@
 	place-self: center;
 }
 
-@container footer (width > 500px) {
+@container footer (width > 1000px) {
 	.ContactForm {
 		grid-area: form;
 	}

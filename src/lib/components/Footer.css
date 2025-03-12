@@ -42,7 +42,7 @@
 	text-align: center;
 }
 
-@container footer (width > 500px) {
+@container footer (width > 1000px) {
 	.Footer-content {
 		grid-template:
 			"logo info nav" auto
@@ -53,7 +53,7 @@
 
 	.Footer-logo {
 		grid-area: logo;
-		margin-inline: 8rem;
+		margin-inline: 2rem;
 	}
 
 	.Footer-copyright {
