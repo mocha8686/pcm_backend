@@ -22,11 +22,9 @@ export default function Navbar() {
 				/>
 			</Link>
 
-			<Icon
-				className='Navbar-expand'
-				icon='tabler:menu-deep'
-				onClick={toggle}
-			/>
+			<button className={clsx('Navbar-menuButton', show && 'is-enabled')} type='button' onClick={toggle}>
+				<Icon className='Navbar-menuIcon' icon='tabler:menu-deep' />
+			</button>
 
 			<ul
 				className={clsx('Navbar-links', show && 'is-expanded')}
