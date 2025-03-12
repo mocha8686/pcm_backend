@@ -4,6 +4,7 @@ import type { QuestionAnswer } from '$lib/QuestionAnswerContext';
 import QuestionAnswerList from '$lib/components/QuestionAnswerList';
 import type { Stat } from '$lib/components/StatCard';
 import StatCard from '$lib/components/StatCard';
+import ServiceCard from './lib/components/ServiceCard';
 
 export default function Components() {
 	// TODO: get Q&A's from django
@@ -63,6 +64,11 @@ export default function Components() {
 				icon='tabler:ball-baseball'
 				stats={baseballStats}
 			/>
+
+			<ServiceCard title='Athlete Representation' icon='tabler:user-star'>
+				We guide athletes in securing NIL deals by connecting them with brands
+				and managing negotiations.
+			</ServiceCard>
 		</div>
 	);
 }
