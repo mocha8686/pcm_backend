@@ -41,9 +41,7 @@ export interface CollapseAllAction {
 	type: 'collapseAll';
 }
 
-export type Action =
-	| ToggleAction
-	| CollapseAllAction;
+export type Action = ToggleAction | CollapseAllAction;
 
 export function questionAnswerReducer(
 	questionAnswers: ContextQuestionAnswer[],

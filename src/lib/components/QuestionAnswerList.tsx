@@ -21,7 +21,7 @@ export default function QuestionAnswerList({ list }: QuestionAnswerListProps) {
 					<QuestionAnswers className='QuestionAnswerList-item' />
 				</ul>
 				<div className='QuestionAnswerList-collapseContainer'>
-				<CollapseAll className={'QuestionAnswerList-collapse'} />
+					<CollapseAll className={'QuestionAnswerList-collapse'} />
 				</div>
 			</div>
 		</QuestionAnswerProvider>

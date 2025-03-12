@@ -22,7 +22,11 @@ export default function Navbar() {
 				/>
 			</Link>
 
-			<button className={clsx('Navbar-menuButton', show && 'is-enabled')} type='button' onClick={toggle}>
+			<button
+				className={clsx('Navbar-menuButton', show && 'is-enabled')}
+				type='button'
+				onClick={toggle}
+			>
 				<Icon className='Navbar-menuIcon' icon='tabler:menu-deep' />
 			</button>
 
