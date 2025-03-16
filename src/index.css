@@ -13,12 +13,14 @@
 	--ff-body: "Faustina Variable", serif;
 	--ff-cta: "Playfair Variable", serif;
 	--ff-accent: var(--ff-header);
+	--ff-hero: var(--ff-body);
 
 	--fs-secondary: 0.85rem;
 	--fs-icon: 2rem;
 	--fs-icon-secondary: 1.5rem;
 	--fs-icon-inline: 1.25rem;
 	--fs-cta: 1.25rem;
+	--fs-hero-nav-link: 1.125rem;
 	--fs-placeholder: var(--fs-secondary);
 	--fs-copyright: var(--fs-secondary);
 
@@ -41,6 +43,7 @@
 		) inset, 0px 4px 8px 0px #000 inset;
 
 	--z-navbar: 1000;
+	--z-background: -100;
 
 	scroll-behavior: smooth;
 }
