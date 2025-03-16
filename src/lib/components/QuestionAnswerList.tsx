@@ -35,7 +35,6 @@ interface QuestionAnswersProps {
 function QuestionAnswers({ className }: QuestionAnswersProps) {
 	const questionAnswers = useQuestionAnswers();
 	const dispatch = useQuestionAnswersDispatch();
-	if (!questionAnswers || !dispatch) return;
 
 	return (
 		<>

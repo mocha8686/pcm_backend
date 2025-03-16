@@ -8,11 +8,27 @@ export const QuestionAnswerDispatchContext =
 	createContext<React.Dispatch<Action> | null>(null);
 
 export function useQuestionAnswers() {
-	return useContext(QuestionAnswerContext);
+	const ctx = useContext(QuestionAnswerContext);
+
+	if (!ctx) {
+		throw new Error(
+			'useQuestionAnswer must be used within <QuestionAnswerContext.Provider>',
+		);
+	}
+
+	return ctx;
 }
 
 export function useQuestionAnswersDispatch() {
-	return useContext(QuestionAnswerDispatchContext);
+	const ctx = useContext(QuestionAnswerDispatchContext);
+
+	if (!ctx) {
+		throw new Error(
+			'useQuestionAnswer must be used within <QuestionAnswerContext.Provider>',
+		);
+	}
+
+	return ctx;
 }
 
 export interface QuestionAnswer {
