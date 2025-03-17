@@ -3,13 +3,15 @@ import clsx from 'clsx';
 import type React from 'react';
 import Icon, { type IconProps } from './Icon';
 
+export type ButtonProps = Partial<IconProps> &
+	React.ComponentPropsWithoutRef<'button'>;
+
 export default function Button({
 	children,
 	className,
 	icon,
 	...props
-}: Partial<IconProps> & React.ComponentPropsWithoutRef<'button'>) {
-	// TODO: make it glow on hover/focus
+}: ButtonProps) {
 	return (
 		<button className={clsx('Button', className)} {...props}>
 			{icon && <Icon icon={icon} className='Button-icon' />}

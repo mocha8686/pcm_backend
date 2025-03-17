@@ -2,10 +2,13 @@ import './Hero.css';
 import { Link } from 'react-router';
 import CallToAction from '$lib/components/CallToAction';
 import logo from '$lib/assets/pcm_accent_transparent.webp';
+import clsx from 'clsx';
 
-export default function Hero() {
+export type HeroProps = React.ComponentPropsWithoutRef<'header'>;
+
+export default function Hero({ className, ...props }: HeroProps) {
 	return (
-		<header className='Hero'>
+		<header className={clsx('Hero', className)} {...props}>
 			<nav className='Hero-nav'>
 				<Link className='Hero-link' to='/about'>
 					About
