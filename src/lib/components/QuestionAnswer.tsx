@@ -22,8 +22,8 @@ export default function QuestionAnswer({
 	className,
 	last = false,
 }: React.PropsWithChildren<QuestionAnswerProps>) {
-	const ref: ElementRef<HTMLButtonElement> = useRef(null);
-	const answerRef: ElementRef<HTMLDivElement> = useRef(null);
+	const ref = useRef<HTMLButtonElement>(null);
+	const answerRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
 		if (answerRef.current && ref.current) {
@@ -68,5 +68,3 @@ export default function QuestionAnswer({
 		</button>
 	);
 }
-
-type ElementRef<T> = React.MutableRefObject<null | T>;
