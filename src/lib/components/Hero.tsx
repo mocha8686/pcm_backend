@@ -4,7 +4,7 @@ import CallToAction from '$lib/components/CallToAction';
 import logo from '$lib/assets/pcm_accent_transparent.webp';
 import clsx from 'clsx';
 
-export type HeroProps = React.ComponentPropsWithoutRef<'header'>;
+export type HeroProps = React.ComponentPropsWithRef<'header'>;
 
 export default function Hero({ className, ...props }: HeroProps) {
 	return (
