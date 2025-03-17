@@ -22,7 +22,7 @@ export default function StatCard({
 	return (
 		<div className={clsx('StatCard', className)}>
 			<header className='StatCard-header'>
-				<h2 className='StatCard-title'>{title}</h2>
+				<h3 className='StatCard-title'>{title}</h3>
 				<Icon className='StatCard-icon' icon={icon} />
 			</header>
 
