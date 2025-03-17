@@ -3,6 +3,7 @@
 
 :root {
 	--cl-accent: hsl(41deg 100% 82% / 100%);
+	--cl-accent-secondary: hsl(41deg 100% 90% / 100%);
 	--cl-background: hsl(228deg 9% 14% / 100%);
 	--cl-raise: hsl(228deg 9% 19% / 100%);
 	--cl-drop: hsl(228deg 9% 7% / 100%);
@@ -67,12 +68,22 @@ h5,
 h6 {
 	font-family: var(--ff-header);
 	font-weight: var(--fw-header);
+}
+
+h1,
+h2,
+h3 {
 	color: var(--cl-accent);
+}
+
+h4,
+h5,
+h6 {
+	color: var(--cl-accent-secondary);
 }
 
 a {
 	color: var(--cl-accent);
-	transition: var(--tr-link-hover);
 }
 
 a:hover {

@@ -4,7 +4,9 @@ import type { QuestionAnswer } from '$lib/QuestionAnswerContext';
 import QuestionAnswerList from '$lib/components/QuestionAnswerList';
 import type { Stat } from '$lib/components/StatCard';
 import StatCard from '$lib/components/StatCard';
-import ServiceCard from './lib/components/ServiceCard';
+import ServiceCard from '$lib/components/ServiceCard';
+import AthleteCard, { type Athlete } from '$lib/components/AthleteCard';
+import amos from '$lib/assets/amos-aguilera.webp';
 
 export default function Components() {
 	// TODO: get Q&A's from django
@@ -49,6 +51,15 @@ export default function Components() {
 		{ id: 4, name: 'Defense', body: 'Calm footwork through the play.' },
 	];
 
+	// TODO: get athlete from django
+	const athlete: Athlete = {
+		name: 'Amos Aguilera',
+		position: '1B',
+		school: 'Jurupa Hills High School',
+		image: amos,
+		tags: ['Baseball', 'NIL', 'Multi-Sport'],
+	};
+
 	return (
 		<div style={{ padding: '1rem' }}>
 			<CallToAction to='#' className='test' icon='tabler:mail-fast'>
@@ -69,6 +80,8 @@ export default function Components() {
 				We guide athletes in securing NIL deals by connecting them with brands
 				and managing negotiations.
 			</ServiceCard>
+
+			<AthleteCard {...athlete} />
 		</div>
 	);
 }

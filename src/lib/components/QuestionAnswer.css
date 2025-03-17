@@ -48,7 +48,7 @@
 	justify-content: space-between;
 
 	font-family: var(--ff-accent);
-	color: var(--cl-accent);
+	color: var(--cl-accent-secondary);
 
 	transition: var(--tr-link-hover);
 }
@@ -62,6 +62,7 @@
 	flex: none;
 	font-size: var(--fs-icon-secondary);
 	transition: rotate var(--transition-duration) ease-out;
+	color: var(--cl-accent);
 }
 
 .QuestionAnswer-icon.is-enabled {
