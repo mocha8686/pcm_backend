@@ -64,7 +64,7 @@ export default function AthleteCarousel({
 
 			el.scrollIntoView({
 				behavior: 'smooth',
-				block: 'center',
+				block: 'nearest',
 				inline: 'center',
 			});
 		};
