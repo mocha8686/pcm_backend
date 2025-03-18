@@ -3,6 +3,7 @@ import AthleteCard, { type Athlete } from './AthleteCard';
 import './AthleteCarousel.css';
 import clsx from 'clsx';
 import { useEffect, useRef } from 'react';
+import CallToAction from './CallToAction';
 
 export type AthleteID = number;
 
@@ -134,6 +135,7 @@ export default function AthleteCarousel({
 	return (
 		<>
 			<h2 className='AthleteCarousel-title'>Our Partnered Athletes</h2>
+
 			<ul
 				ref={carouselRef}
 				className={clsx('AthleteCarousel', className)}
@@ -141,8 +143,20 @@ export default function AthleteCarousel({
 			>
 				{athleteElements.map(e => e.athleteCard)}
 			</ul>
+
 			<div className='AthleteCarousel-radioGroup'>
 				{athleteElements.map(e => e.radioButton)}
+			</div>
+
+			<div className='AthleteCarousel-ctaContainer'>
+				<CallToAction
+					className='AthleteCarousel-cta'
+					ctaType='a'
+					to='/athletes'
+					icon='tabler:users-group'
+				>
+					View All Our Athletes
+				</CallToAction>
 			</div>
 		</>
 	);

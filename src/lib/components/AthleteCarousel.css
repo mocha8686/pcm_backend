@@ -53,3 +53,10 @@
 .AthleteCarousel-radio.is-active {
 	background-color: var(--cl-accent);
 }
+
+.AthleteCarousel-ctaContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-block-start: 3rem;
+}
