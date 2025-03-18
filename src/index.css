@@ -84,6 +84,7 @@ h6 {
 
 a {
 	color: var(--cl-accent);
+	transition: var(--tr-link-hover);
 }
 
 a:hover {
