@@ -133,7 +133,7 @@ export default function AthleteCarousel({
 	});
 
 	return (
-		<>
+		<div className='AthleteCarousel-container'>
 			<h2 className='AthleteCarousel-title'>Our Partnered Athletes</h2>
 
 			<ul
@@ -148,16 +148,14 @@ export default function AthleteCarousel({
 				{athleteElements.map(e => e.radioButton)}
 			</div>
 
-			<div className='AthleteCarousel-ctaContainer'>
-				<CallToAction
-					className='AthleteCarousel-cta'
-					ctaType='a'
-					to='/athletes'
-					icon='tabler:users-group'
-				>
-					View All Our Athletes
-				</CallToAction>
-			</div>
-		</>
+			<CallToAction
+				className='AthleteCarousel-cta'
+				ctaType='a'
+				to='/athletes'
+				icon='tabler:users-group'
+			>
+				View All Our Athletes
+			</CallToAction>
+		</div>
 	);
 }

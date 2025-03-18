@@ -3,7 +3,6 @@
 	flex-direction: column;
 	gap: 0.625rem;
 
-	max-width: 20rem;
 	padding: 1.5rem 1rem;
 
 	background-color: var(--cl-drop);

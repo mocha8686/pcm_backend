@@ -1,3 +1,4 @@
+import './Components.css';
 import CallToAction from '$lib/components/CallToAction';
 import { Link } from 'react-router';
 import type { QuestionAnswer } from '$lib/QuestionAnswerContext';
@@ -71,17 +72,26 @@ export default function Components() {
 			<QuestionAnswerList list={questionAnswers} />
 
 			<StatCard
+				className='Components-statCard'
 				title='Baseball'
 				icon='tabler:ball-baseball'
 				stats={baseballStats}
 			/>
 
-			<ServiceCard title='Athlete Representation' icon='tabler:user-star'>
+			<ServiceCard
+				className='Components-serviceCard'
+				title='Athlete Representation'
+				icon='tabler:user-star'
+			>
 				We guide athletes in securing NIL deals by connecting them with brands
 				and managing negotiations.
 			</ServiceCard>
 
-			<AthleteCard to='/athletes/demo' {...athlete} />
+			<AthleteCard
+				className='Components-athleteCard'
+				to='/athletes/demo'
+				{...athlete}
+			/>
 		</div>
 	);
 }

@@ -8,6 +8,7 @@ import AthleteCarousel, {
 	type CarouselAthlete,
 } from '$lib/components/AthleteCarousel';
 import amos from '$lib/assets/amos-aguilera.webp';
+import ServiceList, { type Service } from '$lib/components/ServiceList';
 
 export default function Home() {
 	const [showNav, setShowNav] = useState(false);
@@ -39,12 +40,53 @@ export default function Home() {
 		tags: ['Baseball', 'NIL', 'Multi-Sport'],
 	}));
 
+	// TODO: get services from ???
+	const services: Service[] = [
+		{
+			id: 0,
+			title: 'NIL Deal Negotiation',
+			icon: 'tabler:briefcase',
+			body: 'We work closely with brands and businesses to negotiate fair and beneficial NIL deals for our athletes. Our team ensures that each contract aligns with the athlete’s goals and long-term success.',
+		},
+		{
+			id: 1,
+			title: 'Sponsorship & Endorsement Opportunities',
+			icon: 'tabler:heart-handshake',
+			body: "Connecting athletes with the right sponsors is our specialty. We seek out partnerships that enhance our athletes' brand value and provide meaningful financial opportunities.",
+		},
+		{
+			id: 2,
+			title: 'Social Media Growth & Monetization',
+			icon: 'tabler:social',
+			body: 'We help athletes expand their online presence and monetize their social media platforms effectively. From content strategy to engagement optimization, we ensure athletes maximize their digital impact.',
+		},
+		{
+			id: 3,
+			title: 'Personal Branding & Marketing Strategy',
+			icon: 'tabler:user-star',
+			body: 'Building a strong personal brand is key to long-term success. We assist athletes in developing their brand identity, creating compelling content, and positioning themselves as marketable figures in the sports industry.',
+		},
+		{
+			id: 4,
+			title: 'Financial Literacy & Contract Review',
+			icon: 'tabler:shield-dollar',
+			body: 'Understanding NIL earnings and contract terms is crucial. We provide financial literacy education and contract review services to ensure our athletes make informed decisions about their earnings and agreements. We also offer specialized training and workshops to educate athletes about NIL opportunities, contract reviews, and financial management.',
+		},
+		{
+			id: 5,
+			title: 'Business & Entrepreneurship Guidance',
+			icon: 'tabler:file-certificate',
+			body: 'For athletes looking to explore business ventures, we provide strategic guidance on launching their own products, businesses, or investment opportunities. Our goal is to equip athletes with the knowledge and skills to thrive beyond their playing careers.',
+		},
+	];
+
 	return (
-		<>
+		<main>
 			<Hero ref={heroRef} id='hero' />
 			<Navbar className={clsx('Home-navbar', showNav && 'is-visible')} />
 			<AthleteCarousel athletes={athletes} />
+			<ServiceList services={services} />
 			<Footer />
-		</>
+		</main>
 	);
 }
