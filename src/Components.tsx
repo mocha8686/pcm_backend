@@ -81,7 +81,7 @@ export default function Components() {
 				and managing negotiations.
 			</ServiceCard>
 
-			<AthleteCard {...athlete} />
+			<AthleteCard to='/athletes/demo' {...athlete} />
 		</div>
 	);
 }

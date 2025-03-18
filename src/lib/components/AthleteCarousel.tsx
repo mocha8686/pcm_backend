@@ -21,7 +21,7 @@ export default function AthleteCarousel({
 	// TODO: replace name key with id pkey
 
 	const carouselRef = useRef<HTMLUListElement>(null);
-	const athletesRef = useRef<Map<AthleteID, HTMLDivElement | null>>(null);
+	const athletesRef = useRef<Map<AthleteID, HTMLAnchorElement | null>>(null);
 	const buttonsRef = useRef<Map<AthleteID, HTMLButtonElement | null>>(null);
 
 	function getAthletesMap() {
@@ -43,8 +43,10 @@ export default function AthleteCarousel({
 			<li key={id} className='AthleteCarousel-item'>
 				<AthleteCard
 					key={id}
+					to='/athletes/demo'
 					data-id={id}
 					ref={node => {
+						if (!node) return;
 						const map = getAthletesMap();
 						map.set(id, node);
 						return () => {
