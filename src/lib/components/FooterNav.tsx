@@ -1,6 +1,6 @@
 import type React from 'react';
 import './FooterNav.css';
-import { Link, LinkProps } from 'react-router';
+import { Link, type LinkProps } from 'react-router';
 import Icon from './Icon';
 import clsx from 'clsx';
 

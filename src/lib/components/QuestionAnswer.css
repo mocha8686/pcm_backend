@@ -59,10 +59,13 @@
 
 .QuestionAnswer-icon {
 	rotate: 0deg;
+
 	flex: none;
+
 	font-size: var(--fs-icon-secondary);
-	transition: rotate var(--transition-duration) ease-out;
 	color: var(--cl-accent);
+
+	transition: rotate var(--transition-duration) ease-out;
 }
 
 .QuestionAnswer-icon.is-enabled {

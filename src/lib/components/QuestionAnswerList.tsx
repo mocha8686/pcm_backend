@@ -5,10 +5,10 @@ import {
 	useQuestionAnswersDispatch,
 } from '$lib/QuestionAnswerContext';
 import clsx from 'clsx';
-import Button, { ButtonProps } from './Button';
+import Button, { type ButtonProps } from './Button';
 import QuestionAnswerEl from './QuestionAnswer';
 import { QuestionAnswerProvider } from './QuestionAnswerProvider';
-import React from 'react';
+import type React from 'react';
 
 export interface QuestionAnswerListProps {
 	list: QuestionAnswer[];

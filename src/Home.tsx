@@ -5,9 +5,8 @@ import Navbar from '$lib/components/Navbar';
 import { useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
 import AthleteCarousel, {
-	CarouselAthlete,
+	type CarouselAthlete,
 } from '$lib/components/AthleteCarousel';
-import type { Athlete } from '$lib/components/AthleteCard';
 import amos from '$lib/assets/amos-aguilera.webp';
 
 export default function Home() {
