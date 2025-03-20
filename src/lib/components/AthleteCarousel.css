@@ -31,6 +31,8 @@
 .AthleteCarousel-athlete {
 	scroll-snap-align: center;
 	max-width: 12rem;
+	background: none;
+	box-shadow: none;
 }
 
 .AthleteCarousel-radioGroup {
