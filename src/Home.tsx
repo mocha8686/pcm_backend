@@ -94,6 +94,7 @@ export default function Home() {
 					type='range'
 					min='4'
 					max='16'
+					value={nAthletes}
 					onChange={e => {
 						const n = Number.parseInt(e.target.value);
 						if (Number.isNaN(n)) return;
