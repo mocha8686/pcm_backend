@@ -9,6 +9,7 @@ import AthleteCarousel, {
 } from '$lib/components/AthleteCarousel';
 import amos from '$lib/assets/amos-aguilera.webp';
 import ServiceList, { type Service } from '$lib/components/ServiceList';
+import AboutVideo from '$lib/components/AboutVideo';
 
 export default function Home() {
 	const [showNav, setShowNav] = useState(false);
@@ -86,6 +87,7 @@ export default function Home() {
 			<Navbar className={clsx('Home-navbar', showNav && 'is-visible')} />
 			<AthleteCarousel athletes={athletes} />
 			<ServiceList services={services} />
+			<AboutVideo />
 			<Footer />
 		</main>
 	);
