@@ -42,6 +42,10 @@
 	background-color: unset;
 
 	transition: all 200ms ease-in;
+
+	@container navbar (width > 500px) {
+		display: none;
+	}
 }
 
 .Navbar-menuButton.is-enabled {
@@ -73,6 +77,20 @@
 	background-color: var(--cl-raise);
 
 	transition: translate 200ms ease-in;
+
+	@container navbar (width > 500px) {
+		position: static;
+		translate: 0;
+
+		flex-direction: row;
+		gap: 0.5rem;
+		align-items: stretch;
+		justify-content: end;
+
+		height: unset;
+
+		background-color: unset;
+	}
 }
 
 .Navbar-links.is-expanded {
@@ -94,6 +112,10 @@
 	text-decoration: none;
 
 	transition: all 75ms ease;
+
+	@container navbar (width > 500px) {
+		padding: 0 0.5rem;
+	}
 }
 
 .Navbar-link.active,
@@ -104,28 +126,4 @@
 
 .Navbar-link:hover {
 	filter: var(--fx-link-hover);
-}
-
-@container navbar (width > 500px) {
-	.Navbar-menuButton {
-		display: none;
-	}
-
-	.Navbar-links {
-		position: static;
-		translate: 0;
-
-		flex-direction: row;
-		gap: 0.5rem;
-		align-items: stretch;
-		justify-content: end;
-
-		height: unset;
-
-		background-color: unset;
-	}
-
-	.Navbar-link {
-		padding: 0 0.5rem;
-	}
 }

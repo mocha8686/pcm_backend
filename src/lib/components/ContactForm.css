@@ -7,6 +7,10 @@
 
 	width: 100%;
 	max-width: 32rem;
+
+	@container footer (width > 1000px) {
+		grid-area: form;
+	}
 }
 
 .ContactForm-header,
@@ -40,10 +44,4 @@
 
 .ContactForm-submit {
 	place-self: center;
-}
-
-@container footer (width > 1000px) {
-	.ContactForm {
-		grid-area: form;
-	}
 }

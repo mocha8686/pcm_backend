@@ -5,6 +5,10 @@
 	place-self: center;
 
 	max-width: 30rem;
+
+	@container footer (width > 1000px) {
+		grid-area: nav;
+	}
 }
 
 .FooterNav-header {
@@ -42,10 +46,4 @@
 	font-family: var(--ff-accent);
 	color: inherit;
 	text-decoration: none;
-}
-
-@container footer (width > 1000px) {
-	.FooterNav {
-		grid-area: nav;
-	}
 }

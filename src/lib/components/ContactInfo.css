@@ -6,10 +6,19 @@
 	place-self: center;
 
 	max-width: 28rem;
+
+	@container footer (width > 1000px) {
+		grid-area: info;
+		grid-template-columns: 1fr 1fr;
+	}
 }
 
 .ContactInfo-header {
 	text-align: center;
+
+	@container footer (width > 1000px) {
+		grid-column: 1 / 3;
+	}
 }
 
 .ContactInfo-traditional,
@@ -34,15 +43,4 @@
 	color: inherit;
 	text-align: center;
 	text-decoration: none;
-}
-
-@container footer (width > 1000px) {
-	.ContactInfo {
-		grid-area: info;
-		grid-template-columns: 1fr 1fr;
-	}
-
-	.ContactInfo-header {
-		grid-column: 1 / 3;
-	}
 }

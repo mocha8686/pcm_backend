@@ -23,12 +23,25 @@
 
 	background-color: var(--cl-drop);
 	box-shadow: var(--bs-vertical-inner);
+
+	@container footer (width > 1000px) {
+		grid-template:
+			"logo info nav" auto
+			"form form form" auto
+			"copyright copyright copyright" auto / auto 1fr 1fr;
+		padding-block: 2rem;
+	}
 }
 
 .Footer-logo {
 	display: block;
 	place-self: center;
 	max-width: 8rem;
+
+	@container footer (width > 1000px) {
+		grid-area: logo;
+		margin-inline: 2rem;
+	}
 }
 
 .Footer-logoImage {
@@ -40,23 +53,8 @@
 .Footer-copyright {
 	font-size: var(--fs-copyright);
 	text-align: center;
-}
 
-@container footer (width > 1000px) {
-	.Footer-content {
-		grid-template:
-			"logo info nav" auto
-			"form form form" auto
-			"copyright copyright copyright" auto / auto 1fr 1fr;
-		padding-block: 2rem;
-	}
-
-	.Footer-logo {
-		grid-area: logo;
-		margin-inline: 2rem;
-	}
-
-	.Footer-copyright {
+	@container footer (width > 1000px) {
 		grid-area: copyright;
 	}
 }
