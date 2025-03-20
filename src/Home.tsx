@@ -15,6 +15,8 @@ export default function Home() {
 	const [showNav, setShowNav] = useState(false);
 	const heroRef = useRef<HTMLElement>(null);
 
+	const [nAthletes, setNAthletes] = useState(4);
+
 	useEffect(() => {
 		const callback: IntersectionObserverCallback = entries => {
 			for (const entry of entries) {
@@ -32,12 +34,12 @@ export default function Home() {
 	});
 
 	// TODO: get athletes from django
-	const athletes: CarouselAthlete[] = [...Array(16)].map((_, i) => ({
+	const athletes: CarouselAthlete[] = [...Array(nAthletes)].map((_, i) => ({
 		id: i,
 		name: 'Amos Aguilera',
 		position: '1B',
 		school: 'Jurupa Hills High School',
-		image: amos,
+		image: i === 0 ? amos : `https://unsplash.it/id/${(i * 142) % 517}/400/240`,
 		tags: ['Baseball', 'NIL', 'Multi-Sport'],
 	}));
 
@@ -86,6 +88,19 @@ export default function Home() {
 			<Hero ref={heroRef} id='hero' />
 			<Navbar className={clsx('Home-navbar', showNav && 'is-visible')} />
 			<AthleteCarousel athletes={athletes} />
+			<label style={{display:'flex',flexDirection:'row',gap:'1rem'}}>
+				Number of athletes
+				<input
+					type='range'
+					min='4'
+					max='16'
+					onChange={e => {
+						const n = Number.parseInt(e.target.value);
+						if (Number.isNaN(n)) return;
+						setNAthletes(Math.max(n, 1));
+					}}
+				/>
+			</label>
 			<ServiceList services={services} />
 			<AboutVideo />
 			<Footer />
