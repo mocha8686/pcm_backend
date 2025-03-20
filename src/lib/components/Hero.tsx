@@ -21,9 +21,9 @@ export default function Hero({ className, ...props }: HeroProps) {
 				</Link>
 			</nav>
 
-			<div className='Hero-logoContainer'>
+			<div className='Hero-logo'>
 				<img
-					className='Hero-logo'
+					className='Hero-logoImage'
 					src={logo}
 					alt='Players Club Management logo'
 				/>
