@@ -8,6 +8,8 @@ import StatCard from '$lib/components/StatCard';
 import ServiceCard from '$lib/components/ServiceCard';
 import AthleteCard, { type Athlete } from '$lib/components/AthleteCard';
 import amos from '$lib/assets/amos-aguilera.webp';
+import EmployeeCard, { Employee } from '$lib/components/EmployeeCard';
+import demoEmployee from '$lib/assets/employee.jpg';
 
 export default function Components() {
 	// TODO: get Q&A's from django
@@ -61,6 +63,14 @@ export default function Components() {
 		tags: ['Baseball', 'NIL', 'Multi-Sport'],
 	};
 
+	// TODO: get employees from django?
+	const employee: Employee = {
+		name: 'Santiago Zuniga',
+		position: 'Founder & CEO',
+		body: 'With a deep understanding of the NIL space and a passion for helping athletes succeed, Santiago leads Players Club Management with expertise and dedication. His vision is to create a platform where student-athletes can thrive both on and off the field.',
+		image: demoEmployee,
+	};
+
 	return (
 		<div style={{ padding: '1rem' }}>
 			<CallToAction to='#' className='test' icon='tabler:mail-fast'>
@@ -91,6 +101,18 @@ export default function Components() {
 				className='Components-athleteCard'
 				to='/athletes/demo'
 				{...athlete}
+			/>
+
+			<EmployeeCard className='Components-employeeCard' {...employee} />
+			<EmployeeCard
+				className='Components-employeeCard'
+				portraitPosition='right'
+				{...employee}
+			/>
+			<EmployeeCard
+				className='Components-employeeCardTop'
+				portraitPosition='top'
+				{...employee}
 			/>
 		</div>
 	);

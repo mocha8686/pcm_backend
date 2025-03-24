@@ -9,3 +9,11 @@
 .Components-athleteCard {
 	max-width: 12rem;
 }
+
+.Components-employeeCard {
+	max-width: 32rem;
+}
+
+.Components-employeeCardTop {
+	max-width: 18rem;
+}
