@@ -47,18 +47,18 @@
 
 .Hero-logo {
 	place-self: center;
+
+	aspect-ratio: 1;
+	max-width: 100%;
 	max-width: clamp(10rem, 15vmin + 6rem, 22rem);
+	max-height: 100%;
 	margin-inline: 2rem;
+
+	object-fit: cover;
 	background: radial-gradient(circle,
 			rgb(0 0 0 / 75%) 0%,
 			rgb(0 0 0 / 50%) 15%,
 			rgb(0 0 0 / 0%) 65%);
-}
-
-.Hero-logoImage {
-	aspect-ratio: 1;
-	max-width: 100%;
-	max-height: 100%;
 }
 
 .Hero-textContainer {

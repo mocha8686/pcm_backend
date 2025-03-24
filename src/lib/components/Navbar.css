@@ -27,6 +27,7 @@
 .Navbar-logoImage {
 	aspect-ratio: 1;
 	max-height: 100%;
+	object-fit: cover;
 }
 
 .Navbar-menuButton {

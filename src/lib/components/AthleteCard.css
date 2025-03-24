@@ -20,17 +20,15 @@
 	box-shadow: var(--bs-full-inner);
 }
 
-.AthleteCard-portraitContainer {
-	overflow: hidden;
-	grid-area: portrait;
-	border-radius: 0.25rem;
-	box-shadow: var(--bs-full-inner);
-}
-
 .AthleteCard-portrait {
+	grid-area: portrait;
+
 	width: 100%;
 	height: 100%;
+	border-radius: 0.25rem;
+
 	object-fit: cover;
+	box-shadow: var(--bs-full-inner);
 }
 
 .AthleteCard-name {

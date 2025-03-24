@@ -21,13 +21,11 @@ export default function Hero({ className, ...props }: HeroProps) {
 				</Link>
 			</nav>
 
-			<div className='Hero-logo'>
-				<img
-					className='Hero-logoImage'
-					src={logo}
-					alt='Players Club Management logo'
-				/>
-			</div>
+			<img
+				className='Hero-logo'
+				src={logo}
+				alt='Players Club Management logo'
+			/>
 
 			<section className='Hero-textContainer'>
 				<div className='Hero-text'>

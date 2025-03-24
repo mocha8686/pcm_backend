@@ -32,13 +32,11 @@ export default function AthleteCard({
 			className={clsx('AthleteCard', className)}
 			{...props}
 		>
-			<div className='AthleteCard-portraitContainer'>
-				<img
-					src={image}
-					alt={`Portrait of ${name}`}
-					className='AthleteCard-portrait'
-				/>
-			</div>
+			<img
+				src={image}
+				alt={`Portrait of ${name}`}
+				className='AthleteCard-portrait'
+			/>
 			<h3 className='AthleteCard-name'>{name}</h3>
 			<div className='AthleteCard-info'>
 				<p className='AthleteCard-position'>{position}</p>
