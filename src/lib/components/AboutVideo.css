@@ -1,6 +1,7 @@
 .AboutVideo-container {
 	container-name: about-us-video;
 	container-type: inline-size;
+	margin-block: 10rem;
 }
 
 .AboutVideo-layout {
