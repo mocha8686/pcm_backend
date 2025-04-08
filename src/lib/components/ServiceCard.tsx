@@ -16,7 +16,7 @@ export default function ServiceCard({
 	return (
 		<div className={clsx('ServiceCard', className)}>
 			<header className='ServiceCard-header'>
-				<h2 className='ServiceCard-title'>{title}</h2>
+				<h3 className='ServiceCard-title'>{title}</h3>
 				<Icon className='ServiceCard-icon' icon={icon} />
 			</header>
 			<div className='ServiceCard-body'>{children}</div>

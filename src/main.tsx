@@ -20,6 +20,7 @@ import About from './About.tsx';
 import Athletes from './Athletes.tsx';
 import Contact from './Contact.tsx';
 import ScrollToTop from './lib/components/ScrollToTop.tsx';
+import AthleteProfile from './AthleteProfile.tsx';
 
 // TODO: get url from .env.development or .env.production
 setupFetch(fetch, 'http://localhost:8000');
@@ -38,6 +39,7 @@ if (root) {
 						<Route path='/athletes' element={<Athletes />} />
 						<Route path='/contact' element={<Contact />} />
 						<Route path='/components' element={<Components />} />
+						<Route path="/athletes/demo" element={<AthleteProfile />} />
 					</Route>
 				</Routes>
 			</BrowserRouter>

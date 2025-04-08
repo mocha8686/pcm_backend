@@ -40,6 +40,7 @@ export default function Navbar() {
 				<NavbarItem to='/athletes'>Athletes</NavbarItem>
 				<NavbarItem to='/contact'>Contact</NavbarItem>
 				<NavbarItem to='/components'>Components</NavbarItem>
+				<NavbarItem to='/athletes/demo'>Demo Profile</NavbarItem>
 			</ul>
 		</nav>
 	);
