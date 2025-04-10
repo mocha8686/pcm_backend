@@ -2,7 +2,6 @@ import type React from 'react';
 import './EmployeeCard.css';
 import clsx from 'clsx';
 
-
 export interface Employee {
 	name: string;
 	position: string;
@@ -10,7 +9,8 @@ export interface Employee {
 	image: string;
 }
 
-export type EmployeeCardProps = Employee & React.ComponentPropsWithoutRef<'div'>;
+export type EmployeeCardProps = Employee &
+	React.ComponentPropsWithoutRef<'div'>;
 
 export default function EmployeeCard({
 	name,
@@ -21,13 +21,7 @@ export default function EmployeeCard({
 	...props
 }: EmployeeCardProps) {
 	return (
-		<div
-			className={clsx(
-				'EmployeeCard',
-				className,
-			)}
-			{...props}
-		>
+		<div className={clsx('EmployeeCard', className)} {...props}>
 			<img
 				src={image}
 				alt={`Portrait of ${name}`}

@@ -1,8 +1,8 @@
 main {
+	container-type: inline-size;
 	display: flex;
 	flex-direction: column;
 	gap: 4.5rem;
-	container-type: inline-size;
 }
 
 h2 {

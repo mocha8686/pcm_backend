@@ -8,7 +8,7 @@ import StatCard from '$lib/components/StatCard';
 import ServiceCard from '$lib/components/ServiceCard';
 import AthleteCard, { type Athlete } from '$lib/components/AthleteCard';
 import amos from '$lib/assets/amos-aguilera.webp';
-import EmployeeCard, { Employee } from '$lib/components/EmployeeCard';
+import EmployeeCard, { type Employee } from '$lib/components/EmployeeCard';
 import demoEmployee from '$lib/assets/employee.jpg';
 
 export default function Components() {

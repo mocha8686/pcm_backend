@@ -57,10 +57,10 @@
 
 @container list (width < 500px) or (width > 1000px) {
 	.EmployeeCard {
-		max-width: 18rem;
 		grid-template:
 			"portrait" 1fr
 			"info" 1fr / 1fr;
+		max-width: 18rem;
 	}
 
 	.EmployeeCard-portrait {
