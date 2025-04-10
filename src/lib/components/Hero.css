@@ -20,7 +20,7 @@
 	background-image: url("$lib/assets/hero_background.jpg");
 	background-repeat: no-repeat;
 	background-position: 49% 80%;
-	background-size: auto 250dvh;
+	background-size: 250dvh;
 	filter: sepia(100%) hue-rotate(10deg) saturate(25%);
 }
 
