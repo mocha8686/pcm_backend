@@ -18,6 +18,8 @@
 
 	background-color: var(--cl-accent);
 	box-shadow: var(--bs-full-drop);
+
+	transition: all 200ms ease;
 }
 
 .CallToAction-icon {
@@ -27,5 +29,4 @@
 .CallToAction:hover {
 	background-color: var(--cl-background);
 	color: var(--cl-accent);
-	transition: background-color 200ms ease, color 200ms ease;
 }
