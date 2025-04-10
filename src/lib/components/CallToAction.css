@@ -18,8 +18,15 @@
 
 	background-color: var(--cl-accent);
 	box-shadow: var(--bs-full-drop);
+
+	transition: all 200ms ease;
 }
 
 .CallToAction-icon {
 	font-size: var(--fs-icon);
+}
+
+.CallToAction:hover {
+	background-color: var(--cl-background);
+	color: var(--cl-accent);
 }
