@@ -23,3 +23,9 @@
 .CallToAction-icon {
 	font-size: var(--fs-icon);
 }
+
+.CallToAction:hover {
+	background-color: var(--cl-background);
+	color: var(--cl-accent);
+	transition: background-color 200ms ease, color 200ms ease;
+}
