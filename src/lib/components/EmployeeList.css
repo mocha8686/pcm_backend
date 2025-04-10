@@ -1,0 +1,33 @@
+.EmployeeList-container {
+	display: grid;
+	gap: 4rem;
+}
+
+.EmployeeList {
+	container-name: list;
+	container-type: inline-size;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 4rem;
+	place-items: center;
+
+	margin: 0 2rem;
+	padding: 0;
+
+	list-style-type: none;
+
+	@container (width > 1000px) {
+		grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+		align-items: stretch;
+		margin: 0;
+	}
+}
+
+.EmployeeList-item {
+	display: contents;
+}
+
+.EmployeeList-callToAction {
+	place-self: center;
+	max-width: 10rem;
+}
