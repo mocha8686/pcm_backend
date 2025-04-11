@@ -27,6 +27,6 @@
 }
 
 .CallToAction:hover {
-	background-color: var(--cl-background);
 	color: var(--cl-accent);
+	background-color: var(--cl-background);
 }
