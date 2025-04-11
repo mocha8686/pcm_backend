@@ -129,7 +129,7 @@
 
 	font-family: var(--ff-hero);
 	font-size: clamp(0.9rem, 1.5vmax + 0.3rem, 1.2rem);
-	line-height: 1.25;
+	line-height: 1.35;
 
 	@container hero (width < 500px) {
 		text-align: center;

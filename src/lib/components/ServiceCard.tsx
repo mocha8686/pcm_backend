@@ -19,7 +19,7 @@ export default function ServiceCard({
 				<h3 className='ServiceCard-title'>{title}</h3>
 				<Icon className='ServiceCard-icon' icon={icon} />
 			</header>
-			<div className='ServiceCard-body'>{children}</div>
+			<p className='ServiceCard-body'>{children}</p>
 		</div>
 	);
 }

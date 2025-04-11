@@ -39,15 +39,13 @@
 	max-width: 20rem;
 	margin: 0;
 
+	line-height: 1.4;
 	text-align: center;
 
 	@container about-us-video (width > 800px) {
 		place-self: start;
-
 		max-width: 26rem;
-
 		font-size: var(--fs-accent);
-		line-height: 1.25;
 		text-align: unset;
 	}
 }

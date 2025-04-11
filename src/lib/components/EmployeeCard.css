@@ -53,6 +53,7 @@
 
 .EmployeeCard-body {
 	margin: 0;
+	line-height: 1.5;
 }
 
 @container list (width < 500px) or (width > 1000px) {
