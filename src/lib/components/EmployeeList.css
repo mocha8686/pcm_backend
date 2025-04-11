@@ -6,10 +6,10 @@
 .EmployeeList {
 	container-name: list;
 	container-type: inline-size;
-	display: grid;
-	grid-template-columns: 1fr;
+	display: flex;
+	flex-direction: column;
 	gap: 4rem;
-	place-items: center;
+	align-items: center;
 
 	margin: 0 2rem;
 	padding: 0;
@@ -17,9 +17,10 @@
 	list-style-type: none;
 
 	@container (width > 1000px) {
-		grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+		flex-direction: row;
+		justify-content: center;
 		align-items: stretch;
-		margin: 0;
+		flex-flow: wrap;
 	}
 }
 

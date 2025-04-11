@@ -54,12 +54,8 @@
 
 body {
 	overflow-x: hidden;
-
-	max-width: 100%;
-
 	font-family: var(--ff-body);
 	color: var(--cl-foreground);
-
 	background-color: var(--cl-background);
 }
 

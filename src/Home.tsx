@@ -14,6 +14,9 @@ import EmployeeList, { type ListEmployee } from '$lib/components/EmployeeList';
 import employee1 from '$lib/assets/employee.jpg';
 import employee2 from '$lib/assets/employee2.jpg';
 import employee3 from '$lib/assets/employee3.jpg';
+import TestimonialList, { type ListTestimonial } from '$lib/components/TestimonialList';
+import testimonial1 from '$lib/assets/testimonial1.png';
+import testimonial2 from '$lib/assets/testimonial2.png';
 
 export default function Home() {
 	const [showNav, setShowNav] = useState(false);
@@ -112,6 +115,42 @@ export default function Home() {
 		},
 	];
 
+	// TODO: get testimonials from ??
+	const testimonials: ListTestimonial[] = [
+		{
+			id: 0,
+			tagline: 'The best organization in the business',
+			quote:
+				"I really can't say enough about how smoothly they've been handling everything. They really are the best organization in the business.",
+			attribution: {
+				name: 'Buck Wheatley',
+				credentials: 'UCLA Football Athlete',
+				image: testimonial1,
+			},
+		},
+		{
+			id: 1,
+			tagline: "They've boosted my athletic career to whole new heights",
+			quote:
+				"Players Club Management has helped me take the next step in my journey. They've boosted my athletic career to whole new heights.",
+			attribution: {
+				name: 'Adam Smith',
+				credentials: 'UCSB Basketball Athlete',
+				image: testimonial2,
+			},
+		},
+		{
+			id: 2,
+			tagline: "I've never had to worry about a single thing",
+			quote:
+				"These guys are great at what they do. I've never had to worry about a single thing they manage.",
+			attribution: {
+				name: 'Mike Walters',
+				credentials: 'ASU Baseball Athlete',
+			},
+		},
+	];
+
 	return (
 		<main>
 			<Hero ref={heroRef} id='hero' />
@@ -134,6 +173,7 @@ export default function Home() {
 			<ServiceList services={services} />
 			<AboutVideo />
 			<EmployeeList employees={employees} />
+			<TestimonialList testimonials={testimonials} />
 			<Footer />
 		</main>
 	);
