@@ -8,8 +8,12 @@ import StatCard from '$lib/components/StatCard';
 import ServiceCard from '$lib/components/ServiceCard';
 import AthleteCard, { type Athlete } from '$lib/components/AthleteCard';
 import amos from '$lib/assets/amos-aguilera.webp';
-import EmployeeCard, { Employee } from '$lib/components/EmployeeCard';
+import EmployeeCard, { type Employee } from '$lib/components/EmployeeCard';
 import demoEmployee from '$lib/assets/employee.jpg';
+import TestimonialCard, {
+	type Testimonial,
+} from '$/lib/components/TestimonialCard';
+import testimonialPhoto from '$/lib/assets/testimonial1.png';
 
 export default function Components() {
 	// TODO: get Q&A's from django
@@ -71,6 +75,20 @@ export default function Components() {
 		image: demoEmployee,
 	};
 
+	// TODO: get testimonials from django?
+	const testimonial: Testimonial = {
+		tagline: 'The best organization in the business',
+		quote:
+			"I really can't say enough about how smoothly they've been handling everything. They really are the best organization in the business.",
+		attribution: {
+			name: 'Buck Wheatley',
+			credentials: 'UCLA Football Athlete',
+		},
+	};
+
+	const testimonialWithPhoto: Testimonial = structuredClone(testimonial);
+	testimonialWithPhoto.attribution.image = testimonialPhoto;
+
 	return (
 		<div style={{ padding: '1rem' }}>
 			<CallToAction to='#' className='test' icon='tabler:mail-fast'>
@@ -104,16 +122,9 @@ export default function Components() {
 			/>
 
 			<EmployeeCard className='Components-employeeCard' {...employee} />
-			<EmployeeCard
-				className='Components-employeeCard'
-				portraitPosition='right'
-				{...employee}
-			/>
-			<EmployeeCard
-				className='Components-employeeCardTop'
-				portraitPosition='top'
-				{...employee}
-			/>
+
+			<TestimonialCard {...testimonial} />
+			<TestimonialCard {...testimonialWithPhoto} />
 		</div>
 	);
 }

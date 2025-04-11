@@ -10,6 +10,16 @@ import AthleteCarousel, {
 import amos from '$lib/assets/amos-aguilera.webp';
 import ServiceList, { type Service } from '$lib/components/ServiceList';
 import AboutVideo from '$lib/components/AboutVideo';
+import EmployeeList, { type ListEmployee } from '$lib/components/EmployeeList';
+import employee1 from '$lib/assets/employee.jpg';
+import employee2 from '$lib/assets/employee2.jpg';
+import employee3 from '$lib/assets/employee3.jpg';
+import TestimonialList, {
+	type ListTestimonial,
+} from '$lib/components/TestimonialList';
+import testimonial1 from '$lib/assets/testimonial1.png';
+import testimonial2 from '$lib/assets/testimonial2.png';
+import FinalHook from '$lib/components/FinalHook';
 
 export default function Home() {
 	const [showNav, setShowNav] = useState(false);
@@ -83,12 +93,73 @@ export default function Home() {
 		},
 	];
 
+	// TODO: get employees from ??
+	const employees: ListEmployee[] = [
+		{
+			id: 0,
+			name: 'Santiago Zuniga',
+			position: 'Founder & CEO',
+			body: 'With a deep understanding of the NIL space and a passion for helping athletes succeed, Santiago leads Players Club Management with expertise and dedication. His vision is to create a platform where student-athletes can thrive both on and off the field.',
+			image: employee1,
+		},
+		{
+			id: 1,
+			name: 'David Zuniga',
+			position: 'Business Development Director',
+			body: "David brings a wealth of experience in business strategy and partnership development. His role focuses on creating strategic collaborations between athletes and brands, ensuring that every deal aligns with our athletes' goals and values.",
+			image: employee2,
+		},
+		{
+			id: 2,
+			name: 'Santana Zuniga',
+			position: 'Marketing & Branding Specialist',
+			body: 'Santana specializes in brand development and marketing strategies that amplify the reach and impact of our athletes. Her creativity and expertise help student-athletes build compelling personal brands that attract top-tier NIL opportunities.',
+			image: employee3,
+		},
+	];
+
+	// TODO: get testimonials from ??
+	const testimonials: ListTestimonial[] = [
+		{
+			id: 0,
+			tagline: 'The best organization in the business',
+			quote:
+				"I really can't say enough about how smoothly they've been handling everything. They really are the best organization in the business.",
+			attribution: {
+				name: 'Buck Wheatley',
+				credentials: 'UCLA Football Athlete',
+				image: testimonial1,
+			},
+		},
+		{
+			id: 1,
+			tagline: "They've boosted my athletic career to whole new heights",
+			quote:
+				"Players Club Management has helped me take the next step in my journey. They've boosted my athletic career to whole new heights.",
+			attribution: {
+				name: 'Adam Smith',
+				credentials: 'UCSB Basketball Athlete',
+				image: testimonial2,
+			},
+		},
+		{
+			id: 2,
+			tagline: "I've never had to worry about a single thing",
+			quote:
+				"These guys are great at what they do. I've never had to worry about a single thing they manage.",
+			attribution: {
+				name: 'Mike Walters',
+				credentials: 'ASU Baseball Athlete',
+			},
+		},
+	];
+
 	return (
 		<main>
 			<Hero ref={heroRef} id='hero' />
 			<Navbar className={clsx('Home-navbar', showNav && 'is-visible')} />
 			<AthleteCarousel athletes={athletes} />
-			<label style={{display:'flex',flexDirection:'row',gap:'1rem'}}>
+			<label style={{ display: 'flex', flexDirection: 'row', gap: '1rem' }}>
 				Number of athletes
 				<input
 					type='range'
@@ -104,6 +175,9 @@ export default function Home() {
 			</label>
 			<ServiceList services={services} />
 			<AboutVideo />
+			<EmployeeList employees={employees} />
+			<TestimonialList testimonials={testimonials} />
+			<FinalHook />
 			<Footer />
 		</main>
 	);

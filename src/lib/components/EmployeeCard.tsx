@@ -9,13 +9,8 @@ export interface Employee {
 	image: string;
 }
 
-export type Test = React.ComponentPropsWithoutRef<'div'> & Employee;
-
-export interface EmployeeCardProps
-	extends Employee,
-		React.ComponentPropsWithoutRef<'div'> {
-	portraitPosition?: 'left' | 'right' | 'top';
-}
+export type EmployeeCardProps = Employee &
+	React.ComponentPropsWithoutRef<'div'>;
 
 export default function EmployeeCard({
 	name,
@@ -23,18 +18,10 @@ export default function EmployeeCard({
 	body,
 	image,
 	className,
-	portraitPosition,
 	...props
 }: EmployeeCardProps) {
 	return (
-		<div
-			className={clsx(
-				'EmployeeCard',
-				`EmployeeCard--${portraitPosition ?? 'left'}`,
-				className,
-			)}
-			{...props}
-		>
+		<div className={clsx('EmployeeCard', className)} {...props}>
 			<img
 				src={image}
 				alt={`Portrait of ${name}`}
