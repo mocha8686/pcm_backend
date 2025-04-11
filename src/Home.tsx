@@ -14,9 +14,12 @@ import EmployeeList, { type ListEmployee } from '$lib/components/EmployeeList';
 import employee1 from '$lib/assets/employee.jpg';
 import employee2 from '$lib/assets/employee2.jpg';
 import employee3 from '$lib/assets/employee3.jpg';
-import TestimonialList, { type ListTestimonial } from '$lib/components/TestimonialList';
+import TestimonialList, {
+	type ListTestimonial,
+} from '$lib/components/TestimonialList';
 import testimonial1 from '$lib/assets/testimonial1.png';
 import testimonial2 from '$lib/assets/testimonial2.png';
+import FinalHook from '$lib/components/FinalHook';
 
 export default function Home() {
 	const [showNav, setShowNav] = useState(false);
@@ -174,6 +177,7 @@ export default function Home() {
 			<AboutVideo />
 			<EmployeeList employees={employees} />
 			<TestimonialList testimonials={testimonials} />
+			<FinalHook />
 			<Footer />
 		</main>
 	);
