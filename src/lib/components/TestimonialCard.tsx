@@ -26,7 +26,7 @@ export default function TestimonialCard({
 }: TestimonialCardProps) {
 	return (
 		<div className={clsx('TestimonialCard', className)} {...props}>
- 		<h3 className='TestimonialCard-tagline'>{tagline}</h3>
+			<h3 className='TestimonialCard-tagline'>{tagline}</h3>
 			<p className='TestimonialCard-quote'>{quote}</p>
 			<div className='TestimonialCard-attributionContainer'>
 				{attribution.image && (

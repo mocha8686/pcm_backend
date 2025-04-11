@@ -10,7 +10,9 @@ import AthleteCard, { type Athlete } from '$lib/components/AthleteCard';
 import amos from '$lib/assets/amos-aguilera.webp';
 import EmployeeCard, { type Employee } from '$lib/components/EmployeeCard';
 import demoEmployee from '$lib/assets/employee.jpg';
-import TestimonialCard, { type Testimonial } from '$/lib/components/TestimonialCard';
+import TestimonialCard, {
+	type Testimonial,
+} from '$/lib/components/TestimonialCard';
 import testimonialPhoto from '$/lib/assets/testimonial1.png';
 
 export default function Components() {
