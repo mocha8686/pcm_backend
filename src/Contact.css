@@ -1,0 +1,28 @@
+.Contact-body {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 4rem;
+	align-items: start;
+
+	max-width: 75rem;
+	margin-inline: auto;
+	padding: 2rem;
+}
+
+.Contact-info {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	align-items: center;
+
+	max-width: 31.25rem;
+	margin-inline: auto;
+
+	text-align: center;
+}
+
+.Contact-links {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
