@@ -8,17 +8,19 @@ export default function Contact() {
 			<div className='Contact-info'>
 				<h1>Get In Touch With Our Professional Team</h1>
 
-				<p>Have questions or want to work with us? Reach out today!</p>
-				<p>
-					Fill out the form and our team will get back to you as soon as
-					possible.
-				</p>
-				<p>
-					Don’t want to use our form? No worries! Feel free to reach out through
-					our email or make a call.
-				</p>
+				<div className='Contact-infoBody'>
+					<p>Have questions or want to work with us? Reach out today!</p>
+					<p>
+						Fill out the form and our team will get back to you as soon as
+						possible.
+					</p>
+				</div>
 
 				<div className='Contact-links'>
+					<p>
+						Don’t want to use our form? No worries! Feel free to reach out
+						through our email or make a call.
+					</p>
 					<ContactInfoItem
 						icon='tabler:mail'
 						text='playersclubmgmtsjz@gmail.com'
@@ -32,7 +34,7 @@ export default function Contact() {
 				</div>
 			</div>
 
-			<ContactForm />
+			<ContactForm title='Write a Message to Us' rows={16} cols={75} />
 		</main>
 	);
 }
