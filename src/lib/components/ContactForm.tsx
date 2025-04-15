@@ -1,10 +1,25 @@
+import type React from 'react';
 import CallToAction from './CallToAction';
 import './ContactForm.css';
+import clsx from 'clsx';
 
-export default function ContactForm() {
+export interface ContactFormProps
+	extends Omit<React.ComponentPropsWithoutRef<'form'>, 'action'> {
+	title?: string;
+	rows?: number;
+	cols?: number;
+}
+
+export default function ContactForm({
+	title = 'Send Us a Message',
+	className,
+	rows = 6,
+	cols = 56,
+	...props
+}: ContactFormProps) {
 	return (
-		<form className='ContactForm' action='/'>
-			<h1 className='ContactForm-header'>Send Us a Message</h1>
+		<form className={clsx('ContactForm', className)} action='/' {...props}>
+			<h1 className='ContactForm-header'>{title}</h1>
 
 			<label className='ContactForm-label' htmlFor='contactForm-name'>
 				Name
@@ -38,8 +53,8 @@ export default function ContactForm() {
 				name='message'
 				id='contactForm-message'
 				placeholder='Hello!'
-				rows={6}
-				cols={28}
+				rows={rows}
+				cols={cols}
 			/>
 
 			<CallToAction
