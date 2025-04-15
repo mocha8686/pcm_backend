@@ -15,6 +15,7 @@ export default function ContactForm() {
 				name='name'
 				id='contactForm-name'
 				placeholder='John Doe'
+				autoComplete='section-contact name work'
 			/>
 
 			<label className='ContactForm-label' htmlFor='contactForm-email'>
@@ -26,6 +27,7 @@ export default function ContactForm() {
 				name='email'
 				id='contactForm-email'
 				placeholder='person@example.com'
+				autoComplete='section-contact email work'
 			/>
 
 			<label className='ContactForm-label' htmlFor='contactForm-message'>
