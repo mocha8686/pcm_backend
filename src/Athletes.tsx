@@ -96,6 +96,7 @@ export default function Athletes() {
 					</span>
 				</div>
 			</section>
+
 			<section className='Athletes-grid'>
 				{filteredAthletes.map(athlete => (
 					<AthleteCard
@@ -109,74 +110,6 @@ export default function Athletes() {
 					/>
 				))}
 			</section>
-			<section className='Athletes-footer'>
-				<div className='Athletes-contactInfo'>
-					<h2>Our Contact Info</h2>
-					<div className='Athletes-socialLinks'>
-						<a href='#' className='Athletes-socialLink'>
-							<span className='Athletes-socialIcon'>� </span>
-							@example
-						</a>
-						<a href='#' className='Athletes-socialLink'>
-							<span className='Athletes-socialIcon'> </span>
-							@example
-						</a>
-						<a href='#' className='Athletes-socialLink'>
-							<span className='Athletes-socialIcon'>� </span>
-							@example
-						</a>
-						<a href='#' className='Athletes-socialLink'>
-							<span className='Athletes-socialIcon'>� </span>
-							@example
-						</a>
-						<a href='#' className='Athletes-socialLink'>
-							<span className='Athletes-socialIcon'>� </span>
-							@example
-						</a>
-						<ContactInfoItem
-							icon='tabler:mail'
-							text='playersclubmgmtsjz@gmail.com'
-							to='mailto:playersclubmgmtsjz@gmail.com'
-						/>
-						<ContactInfoItem
-							icon='tabler:phone'
-							text='(909) 232-2422'
-							to='tel:+1(909)232-2422'
-						/>
-					</div>
-				</div>
-				<div className='Athletes-navigation'>
-					<h2>Navigation</h2>
-					<div className='Athletes-navLinks'>
-						<a href='/' className='Athletes-navLink'>
-							Home
-						</a>
-						<a href='/about' className='Athletes-navLink'>
-							About
-						</a>
-						<a href='/athletes' className='Athletes-navLink'>
-							Athletes
-						</a>
-						<a href='/events' className='Athletes-navLink'>
-							Events
-						</a>
-						<a href='/blog' className='Athletes-navLink'>
-							Blog
-						</a>
-						<a href='/privacy' className='Athletes-navLink'>
-							Privacy Policy
-						</a>
-						<a href='/terms' className='Athletes-navLink'>
-							Terms of Service
-						</a>
-					</div>
-				</div>
-			</section>
-			<section className='Athletes-contactForm'>
-				<h2>Send Us a Message</h2>
-				<ContactForm title='' rows={8} cols={50} />
-			</section>
-			<div className='Athletes-copyright'>© 2025 Players Club Management</div>
 		</main>
 	);
 }
