@@ -20,7 +20,7 @@ export default function StatCarousel({
 	return (
 		<ul className={clsx('StatCarousel', className)} {...props}>
 			{stats.map(({ id, ...card }) => (
-				<StatCard key={id} className="StatCarousel-card" {...card} />
+				<StatCard key={id} className='StatCarousel-card' {...card} />
 			))}
 		</ul>
 	);
