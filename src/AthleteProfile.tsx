@@ -4,44 +4,59 @@ import StatCard from '$lib/components/StatCard';
 import amos from '$lib/assets/amos-aguilera.webp';
 import CallToAction from '$lib/components/CallToAction';
 import TagList, { type ListTag } from '$lib/components/TagList';
+import StatCarousel, { CarouselStatCard } from './lib/components/StatCarousel';
 
 export default function AthleteProfile() {
-	const baseballStats: Stat[] = [
-		{
-			id: 0,
-			name: 'Body',
-			body: '6-3, 200 pounds. Strong frame with present strength.',
-		},
-		{
-			id: 1,
-			name: 'Hit',
-			body: 'RHH. Slightly open stance that evens out when he strides. Hands rest away from back shoulder. Higher launch angle that produces a lot of fly balls. 64.3 mph bat speed with 12g of rotational acceleration.',
-		},
-		{
-			id: 2,
-			name: 'Power',
-			body: '89 mph max exit velocity (78 avg.); 339-foot max batted distance. Consistently pulls the ball.',
-		},
-		{
-			id: 3,
-			name: 'Arm',
-			body: 'RH. INF - 71.00 mph. Side arm release across the infield.',
-		},
-		{
-			id: 4,
-			name: 'Defense',
-			body: 'Calm footwork through the play.',
-		},
 	const tags: ListTag[] = [
 		{ id: 0, body: 'Football' },
 		{ id: 1, body: 'NIL' },
 		{ id: 2, body: 'Team Lead' },
 	];
 
-	const generalStats: Stat[] = [
-		{ id: 0, name: 'Speed', body: '7.02 seconds in the 60-yard dash.' },
-		{ id: 1, name: 'Stride', body: 'Long and tall strides.' },
-	];
+	const baseballStats: CarouselStatCard = {
+		id: 0,
+		title: 'Baseball',
+		icon: 'tabler:ball-baseball',
+		stats: [
+			{
+				id: 0,
+				name: 'Body',
+				body: '6-3, 200 pounds. Strong frame with present strength.',
+			},
+			{
+				id: 1,
+				name: 'Hit',
+				body: 'RHH. Slightly open stance that evens out when he strides. Hands rest away from back shoulder. Higher launch angle that produces a lot of fly balls. 64.3 mph bat speed with 12g of rotational acceleration.',
+			},
+			{
+				id: 2,
+				name: 'Power',
+				body: '89 mph max exit velocity (78 avg.); 339-foot max batted distance. Consistently pulls the ball.',
+			},
+			{
+				id: 3,
+				name: 'Arm',
+				body: 'RH. INF - 71.00 mph. Side arm release across the infield.',
+			},
+			{
+				id: 4,
+				name: 'Defense',
+				body: 'Calm footwork through the play.',
+			},
+		],
+	};
+
+	const generalStats: CarouselStatCard = {
+		id: 1,
+		title: 'General Stats',
+		icon: 'tabler:run',
+		stats: [
+			{ id: 0, name: 'Speed', body: '7.02 seconds in the 60-yard dash.' },
+			{ id: 1, name: 'Stride', body: 'Long and tall strides.' },
+		],
+	};
+
+	const stats = [baseballStats, generalStats];
 
 	return (
 		<main>
@@ -60,22 +75,11 @@ export default function AthleteProfile() {
 				/>
 			</header>
 
-			{/* Stats Header */}
-			<h2 className='AthleteProfile-statsHeader'>Stats</h2>
+			<section className='AthleteProfile-stats'>
+				<h2 className='AthleteProfile-statsHeader'>Stats</h2>
 
-			{/* Stat Cards */}
-			<div className='AthleteProfile-stats'>
-				<StatCard
-					title='Baseball'
-					icon='tabler:ball-baseball'
-					stats={baseballStats}
-				/>
-				<StatCard
-					title='General Stats'
-					icon='tabler:activity'
-					stats={generalStats}
-				/>
-			</div>
+				<StatCarousel stats={stats} />
+			</section>
 
 			{/* Bio Section */}
 			<section className='AthleteProfile-bio'>
