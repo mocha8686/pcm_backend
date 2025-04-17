@@ -61,18 +61,19 @@ export default function AthleteProfile() {
 	return (
 		<main>
 			<header className='AthleteProfile-header'>
-				{/* Top Section */}
+				<div className='AthleteProfile-portraitContainer'>
+					<img
+						className='AthleteProfile-portrait'
+						src={amos}
+						alt='Portrait of Amos Aguilera'
+					/>
+				</div>
+
 				<div className='AthleteProfile-headerInfo'>
 					<h1 className='AthleteProfile-title'>Amos Aguilera</h1>
 					<p>1B | Jurupa Hills High School</p>
 					<TagList tags={tags} />
 				</div>
-
-				<img
-					src={amos}
-					alt='Portrait of Amos Aguilera'
-					className='AthleteProfile-portrait'
-				/>
 			</header>
 
 			<section className='AthleteProfile-stats'>
