@@ -1,3 +1,4 @@
+import './AthleteProfile.css';
 import type { Stat } from '$lib/components/StatCard';
 import StatCard from '$lib/components/StatCard';
 import amos from '$lib/assets/amos-aguilera.webp';
@@ -38,128 +39,48 @@ export default function AthleteProfile() {
 	];
 
 	return (
-		<div>
-			<section
-				style={{
-					padding: '2rem',
-					maxWidth: '1200px',
-					margin: '0 auto',
-					display: 'flex',
-					flexDirection: 'column',
-					gap: '2rem',
-				}}
-			>
+		<main>
+			<header className='AthleteProfile-header'>
 				{/* Top Section */}
-				<div
-					style={{
-						display: 'flex',
-						justifyContent: 'space-between',
-						alignItems: 'center',
-						flexWrap: 'wrap',
-						gap: '2rem',
-					}}
-				>
-					<div style={{ flex: '1' }}>
-						<h1 style={{ fontSize: '1.75rem', color: 'var(--cl-accent)' }}>
-							AMOS AGUILERA
-						</h1>
-						<p>1B | Jurupa Hills High School</p>
-						<div
-							style={{
-								display: 'flex',
-								gap: '0.5rem',
-								flexWrap: 'wrap',
-								marginTop: '0.5rem',
-							}}
-						>
-							<span
-								style={{
-									background: 'var(--cl-raise)',
-									padding: '0.25rem 0.5rem',
-									borderRadius: '0.5rem',
-								}}
-							>
-								Football
-							</span>
-							<span
-								style={{
-									background: 'var(--cl-raise)',
-									padding: '0.25rem 0.5rem',
-									borderRadius: '0.5rem',
-								}}
-							>
-								NIL
-							</span>
-							<span
-								style={{
-									background: 'var(--cl-raise)',
-									padding: '0.25rem 0.5rem',
-									borderRadius: '0.5rem',
-								}}
-							>
-								Team Lead
-							</span>
-						</div>
+				<div className='AthleteProfile-headerInfo'>
+					<h1 className='AthleteProfile-title'>Amos Aguilera</h1>
+					<p>1B | Jurupa Hills High School</p>
+					<div className='AthleteProfile-tags' style={{}}>
+						<span style={{}}>Football</span>
+						<span>NIL</span>
+						<span>Team Lead</span>
 					</div>
-
-					<img
-						src={amos}
-						alt='Amos Aguilera'
-						style={{
-							width: '690px',
-							borderRadius: '0.5rem',
-							objectFit: 'cover',
-						}}
-					/>
 				</div>
 
-				{/* Stats Header */}
-				<h2
-					style={{
-						textAlign: 'center',
-						color: 'var(--cl-accent)',
-						fontSize: '1.5rem',
-					}}
-				>
-					Stats
-				</h2>
+				<img
+					src={amos}
+					alt='Portrait of Amos Aguilera'
+					className='AthleteProfile-portrait'
+				/>
+			</header>
 
-				{/* Stat Cards */}
-				<div
-					style={{
-						display: 'grid',
-						gridTemplateColumns: '1fr 1fr',
-						gap: '2rem',
-					}}
-				>
-					<StatCard
-						title='Baseball'
-						icon='tabler:ball-baseball'
-						stats={baseballStats}
-					/>
-					<StatCard
-						title='General Stats'
-						icon='tabler:activity'
-						stats={generalStats}
-					/>
-				</div>
-			</section>
+			{/* Stats Header */}
+			<h2 className='AthleteProfile-statsHeader'>Stats</h2>
+
+			{/* Stat Cards */}
+			<div className='AthleteProfile-stats'>
+				<StatCard
+					title='Baseball'
+					icon='tabler:ball-baseball'
+					stats={baseballStats}
+				/>
+				<StatCard
+					title='General Stats'
+					icon='tabler:activity'
+					stats={generalStats}
+				/>
+			</div>
 
 			{/* Bio Section */}
-			<section
-				style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}
-			>
-				<h2
-					style={{
-						fontFamily: 'var(--ff-header)',
-						color: 'var(--cl-accent)',
-						marginBottom: '1rem',
-					}}
-				>
-					Premiere Pinch-Hitter Pro
-				</h2>
+			<section className='AthleteProfile-bio'>
+				<h2 className='AthleteProfile-bioTitle'>Premiere Pinch-Hitter Pro</h2>
 
-				<p style={{ textAlign: 'left', marginBottom: '1rem' }}>
+				<p>
 					Amos Aguilera is a 6'1", 170-pound first baseman from Fontana, CA,
 					with a tall, projectable frame and room to add strength. A multi-sport
 					athlete competing in basketball and wrestling, he brings athleticism,
@@ -170,7 +91,7 @@ export default function AthleteProfile() {
 					through his target—he can add more velocity.
 				</p>
 
-				<p style={{ textAlign: 'left' }}>
+				<p>
 					At the plate, Aguilera is a right-handed hitter with a slightly open
 					stance and a small leg lift trigger for timing. His rotational swing
 					and strong hands generate solid bat speed, allowing him to drive the
@@ -182,12 +103,12 @@ export default function AthleteProfile() {
 					develop.
 				</p>
 
-				<div style={{ marginTop: '2rem' }}>
+				<div>
 					<CallToAction icon='tabler:mail-forward' to='/contact'>
 						Want to Get in Touch with This Athlete? Contact Us Now
 					</CallToAction>
 				</div>
 			</section>
-		</div>
+		</main>
 	);
 }

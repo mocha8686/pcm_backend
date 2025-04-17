@@ -1,0 +1,74 @@
+main {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2rem;
+}
+
+.AthleteProfile-header {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.AthleteProfile-headerInfo {
+	flex: 1;
+}
+
+.AthleteProfile-title {
+	font-size: 1.75rem;
+	color: var(--cl-accent);
+	text-transform: uppercase;
+}
+
+.AthleteProfile-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin-top: 0.5rem;
+}
+
+.AthleteProfile-tags span {
+	padding: 0.25rem 0.5rem;
+	border-radius: 0.5rem;
+	background: var(--cl-raise);
+}
+
+.AthleteProfile-portrait {
+	width: 690px;
+	border-radius: 0.5rem;
+	object-fit: cover;
+}
+
+.AthleteProfile-statsHeader {
+	font-size: 1.5rem;
+	color: var(--cl-accent);
+	text-align: center;
+}
+
+.AthleteProfile-stats {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+}
+
+.AthleteProfile-bio {
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.AthleteProfile-bioTitle {
+	margin-bottom: 1rem;
+	font-family: var(--ff-header);
+	color: var(--cl-accent);
+}
+
+.AthleteProfile-bio p {
+	text-align: left;
+}
