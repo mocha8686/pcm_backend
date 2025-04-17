@@ -70,6 +70,7 @@ export default function Athletes() {
 						and the pursuit of greatness.
 					</p>
 				</div>
+
 				<div className='Athletes-search'>
 					<input
 						type='text'
