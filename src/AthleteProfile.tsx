@@ -1,10 +1,8 @@
 import './AthleteProfile.css';
-import type { Stat } from '$lib/components/StatCard';
-import StatCard from '$lib/components/StatCard';
 import amos from '$lib/assets/amos-aguilera.webp';
 import CallToAction from '$lib/components/CallToAction';
 import TagList, { type ListTag } from '$lib/components/TagList';
-import StatCarousel, { CarouselStatCard } from './lib/components/StatCarousel';
+import StatCarousel, { type CarouselStatCard } from './lib/components/StatCarousel';
 
 export default function AthleteProfile() {
 	const tags: ListTag[] = [
