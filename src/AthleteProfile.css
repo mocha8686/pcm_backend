@@ -26,24 +26,6 @@ main {
 	text-transform: uppercase;
 }
 
-.AthleteProfile-tags {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 0.5rem;
-	margin-top: 0.5rem;
-}
-
-.AthleteProfile-tags span {
-	padding: 0.25rem 0.5rem;
-	border-radius: 0.5rem;
-	background: var(--cl-raise);
-}
-
-.AthleteProfile-portrait {
-	width: 690px;
-	border-radius: 0.5rem;
-	object-fit: cover;
-}
 
 .AthleteProfile-statsHeader {
 	font-size: 1.5rem;

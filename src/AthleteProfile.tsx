@@ -3,6 +3,7 @@ import type { Stat } from '$lib/components/StatCard';
 import StatCard from '$lib/components/StatCard';
 import amos from '$lib/assets/amos-aguilera.webp';
 import CallToAction from '$lib/components/CallToAction';
+import TagList, { type ListTag } from '$lib/components/TagList';
 
 export default function AthleteProfile() {
 	const baseballStats: Stat[] = [
@@ -31,6 +32,10 @@ export default function AthleteProfile() {
 			name: 'Defense',
 			body: 'Calm footwork through the play.',
 		},
+	const tags: ListTag[] = [
+		{ id: 0, body: 'Football' },
+		{ id: 1, body: 'NIL' },
+		{ id: 2, body: 'Team Lead' },
 	];
 
 	const generalStats: Stat[] = [
@@ -45,11 +50,7 @@ export default function AthleteProfile() {
 				<div className='AthleteProfile-headerInfo'>
 					<h1 className='AthleteProfile-title'>Amos Aguilera</h1>
 					<p>1B | Jurupa Hills High School</p>
-					<div className='AthleteProfile-tags' style={{}}>
-						<span style={{}}>Football</span>
-						<span>NIL</span>
-						<span>Team Lead</span>
-					</div>
+					<TagList tags={tags} />
 				</div>
 
 				<img
