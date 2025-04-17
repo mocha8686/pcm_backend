@@ -61,12 +61,14 @@ export default function AthleteProfile() {
 	return (
 		<main>
 			<header className='AthleteProfile-header'>
-				<div className='AthleteProfile-portraitContainer'>
-					<img
-						className='AthleteProfile-portrait'
-						src={amos}
-						alt='Portrait of Amos Aguilera'
-					/>
+				<div className='AthleteProfile-portraitFlex'>
+					<div className='AthleteProfile-portraitContainer'>
+						<img
+							className='AthleteProfile-portrait'
+							src={amos}
+							alt='Portrait of Amos Aguilera'
+						/>
+					</div>
 				</div>
 
 				<div className='AthleteProfile-headerInfo'>
@@ -109,11 +111,11 @@ export default function AthleteProfile() {
 				</p>
 			</section>
 
-			<section className="AthleteProfile-callToActionContainer">
-			<h2>Want to Get in Touch with This Athlete?</h2>
-			<CallToAction icon='tabler:mail-fast' to='/contact'>
-Contact Us Now
-			</CallToAction>
+			<section className='AthleteProfile-callToActionContainer'>
+				<h2>Want to Get in Touch with This Athlete?</h2>
+				<CallToAction icon='tabler:mail-fast' to='/contact'>
+					Contact Us Now
+				</CallToAction>
 			</section>
 		</main>
 	);
