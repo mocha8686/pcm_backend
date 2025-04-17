@@ -82,7 +82,6 @@ export default function AthleteProfile() {
 				<StatCarousel stats={stats} />
 			</section>
 
-			{/* Bio Section */}
 			<section className='AthleteProfile-bio'>
 				<h2 className='AthleteProfile-bioTitle'>Premiere Pinch-Hitter Pro</h2>
 
@@ -108,12 +107,13 @@ export default function AthleteProfile() {
 					well-rounded athlete with significant upside as he continues to
 					develop.
 				</p>
+			</section>
 
-				<div>
-					<CallToAction icon='tabler:mail-forward' to='/contact'>
-						Want to Get in Touch with This Athlete? Contact Us Now
-					</CallToAction>
-				</div>
+			<section className="AthleteProfile-callToActionContainer">
+			<h2>Want to Get in Touch with This Athlete?</h2>
+			<CallToAction icon='tabler:mail-fast' to='/contact'>
+Contact Us Now
+			</CallToAction>
 			</section>
 		</main>
 	);

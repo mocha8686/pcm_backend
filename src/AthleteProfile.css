@@ -50,16 +50,21 @@ main {
 
 .AthleteProfile-bio {
 	max-width: 800px;
-	margin: 0 auto;
+	margin-inline: 2rem;
 	text-align: center;
 }
 
-.AthleteProfile-bioTitle {
-	margin-bottom: 1rem;
-	font-family: var(--ff-header);
-	color: var(--cl-accent);
+.AthleteProfile-bio p {
+	line-height: 1.4;
+	text-align: left;
 }
 
-.AthleteProfile-bio p {
-	text-align: left;
+.AthleteProfile-callToActionContainer {
+	margin-inline: 2rem;
+	padding: 1rem 0.5rem 3rem;
+
+	text-align: center;
+
+	background-color: var(--cl-raise);
+	box-shadow: var(--bs-full-drop);
 }
