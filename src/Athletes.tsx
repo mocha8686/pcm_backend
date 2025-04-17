@@ -78,16 +78,18 @@ export default function Athletes() {
 			</section>
 
 			<div className='Athletes-searchContainer'>
-				<Icon className='Athletes-searchIcon' icon='tabler:search' />
-				<input
-					className='Athletes-search'
-					name='search'
-					type='text'
-					placeholder='Search athletes...'
-					autoComplete='off'
-					value={searchQuery}
-					onChange={e => setSearchQuery(e.target.value)}
-				/>
+				<label className='Athletes-search'>
+					<Icon className='Athletes-searchIcon' icon='tabler:search' />
+					<input
+						className='Athletes-searchInput'
+						name='search'
+						type='text'
+						placeholder='Search athletes...'
+						autoComplete='off'
+						value={searchQuery}
+						onChange={e => setSearchQuery(e.target.value)}
+					/>
+				</label>
 			</div>
 
 			{(filteredAthletes.length && (
