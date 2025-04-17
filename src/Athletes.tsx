@@ -1,11 +1,6 @@
 import './Athletes.css';
-import AthleteCard, { Athlete } from '$lib/components/AthleteCard';
-import ContactForm from '$lib/components/ContactForm';
-import { ContactInfoItem } from '$lib/components/ContactInfo';
 import { useState } from 'react';
-import AthleteCarousel, {
-	CarouselAthlete,
-} from '$lib/components/AthleteCarousel';
+import type { CarouselAthlete } from '$lib/components/AthleteCarousel';
 import AthleteGrid from '$lib/components/AthleteGrid';
 import athlete0 from '$lib/assets/amos-aguilera.webp';
 import athlete1 from '$lib/assets/athlete1.webp';
@@ -95,7 +90,9 @@ export default function Athletes() {
 				/>
 			</div>
 
-			{(filteredAthletes.length && <AthleteGrid athletes={filteredAthletes} />) || (
+			{(filteredAthletes.length && (
+				<AthleteGrid athletes={filteredAthletes} />
+			)) || (
 				<div className='Athletes-notFound'>
 					<h2>No Athletes Found</h2>
 					<p>Adjust your search terms and try again.</p>
