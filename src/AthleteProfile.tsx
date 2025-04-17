@@ -1,10 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
-import './Components.css';
 import type { Stat } from '$lib/components/StatCard';
 import StatCard from '$lib/components/StatCard';
-import { Link } from 'react-router-dom'; // Assuming this is the Link component being used
-import clsx from 'clsx';
-import AthleteCard, { type Athlete } from '$lib/components/AthleteCard';
 import amos from '$lib/assets/amos-aguilera.webp';
 import CallToAction from '$lib/components/CallToAction';
 
