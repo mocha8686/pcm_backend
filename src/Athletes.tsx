@@ -1,63 +1,73 @@
 import './Athletes.css';
-import AthleteCard from '$lib/components/AthleteCard';
+import AthleteCard, { Athlete } from '$lib/components/AthleteCard';
 import ContactForm from '$lib/components/ContactForm';
 import { ContactInfoItem } from '$lib/components/ContactInfo';
 import { useState } from 'react';
+import AthleteCarousel, {
+	CarouselAthlete,
+} from '$lib/components/AthleteCarousel';
+import AthleteGrid from '$lib/components/AthleteGrid';
+import athlete0 from '$lib/assets/amos-aguilera.webp';
+import athlete1 from '$lib/assets/athlete1.webp';
+import athlete2 from '$lib/assets/athlete2.jpeg';
+import athlete3 from '$lib/assets/athlete3.jpg';
+import Icon from '$lib/components/Icon';
 
 export default function Athletes() {
 	const [searchQuery, setSearchQuery] = useState('');
 
 	// Sample athlete data - replace with your actual data source
-	const athletes = [
+	const athletes: CarouselAthlete[] = [
 		{
 			id: 1,
-			name: 'AMOS AGUILERA',
+			name: 'Amos Aguilera',
 			position: '1B',
 			school: 'Jurupa Hills High School',
 			tags: ['Baseball', 'NIL', 'Multi-Sport'],
-			image: '/images/athletes/amos-aguilera.jpg',
+			image: athlete0,
 		},
 		{
 			id: 2,
-			name: 'JOHN MEOWER',
+			name: 'John Meower',
 			position: 'Quarterback',
 			school: 'UCLA',
 			tags: ['Football', 'HS'],
-			image: '/images/athletes/john-meower.jpg',
+			image: athlete1,
 		},
 		{
 			id: 3,
-			name: 'EDGAR ALLEN POE',
+			name: 'Edgar Allen Poe',
 			position: 'Team Spirit',
 			school: 'University of Sussex',
 			tags: ['Basketball', 'College', 'MVP'],
-			image: '/images/athletes/edgar-allen-poe.jpg',
+			image: athlete2,
 		},
 		{
 			id: 4,
-			name: 'JEREMY STYLES',
-			position: 'Peak Riddler',
+			name: 'Jeremy Styles',
+			position: 'Peak Rizzler',
 			school: 'University of Jazz',
 			tags: ['Football', 'HS', 'Star Player'],
-			image: '/images/athletes/jeremy-styles.jpg',
+			image: athlete3,
 		},
 	];
+
 	// Filter athletes based on search query
 	const filteredAthletes = athletes.filter(
 		athlete =>
 			athlete.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
 			athlete.position.toLowerCase().includes(searchQuery.toLowerCase()) ||
 			athlete.school.toLowerCase().includes(searchQuery.toLowerCase()) ||
-			athlete.tags.some(tag =>
+			athlete.tags?.some(tag =>
 				tag.toLowerCase().includes(searchQuery.toLowerCase()),
 			),
 	);
+
 	return (
 		<main className='Athletes-body'>
 			<section className='Athletes-hero'>
-				<h1>Our Elite Athletes</h1>
-
-				<div className='Athletes-description'>
+				<div className='Athletes-info'>
+					<h1>Our Elite Athletes</h1>
 					<p>
 						At Players Club Management, we take pride in representing a diverse
 						roster of talented student-athletes. Our athletes are more than just
@@ -70,47 +80,27 @@ export default function Athletes() {
 						and the pursuit of greatness.
 					</p>
 				</div>
+			</section>
 
-				<div className='Athletes-search'>
-					<input
-						type='text'
-						placeholder='Search athletes...'
-						value={searchQuery}
-						onChange={e => setSearchQuery(e.target.value)}
-						className='Athletes-searchInput'
-					/>
-					<span className='Athletes-searchIcon'>
-						<svg
-							xmlns='http://www.w3.org/2000/svg'
-							width='24'
-							height='24'
-							viewBox='0 0 24 24'
-							fill='none'
-							stroke='currentColor'
-							strokeWidth='2'
-							strokeLinecap='round'
-							strokeLinejoin='round'
-						>
-							<circle cx='11' cy='11' r='8' />
-							<line x1='21' y1='21' x2='16.65' y2='16.65' />
-						</svg>
-					</span>
+			<div className='Athletes-searchContainer'>
+				<Icon className='Athletes-searchIcon' icon='tabler:search' />
+				<input
+					className='Athletes-search'
+					name='search'
+					type='text'
+					placeholder='Search athletes...'
+					autoComplete='off'
+					value={searchQuery}
+					onChange={e => setSearchQuery(e.target.value)}
+				/>
+			</div>
+
+			{(filteredAthletes.length && <AthleteGrid athletes={filteredAthletes} />) || (
+				<div className='Athletes-notFound'>
+					<h2>No Athletes Found</h2>
+					<p>Adjust your search terms and try again.</p>
 				</div>
-			</section>
-
-			<section className='Athletes-grid'>
-				{filteredAthletes.map(athlete => (
-					<AthleteCard
-						key={athlete.id}
-						name={athlete.name}
-						position={athlete.position}
-						school={athlete.school}
-						tags={athlete.tags}
-						image={athlete.image}
-						to='/athletes/demo'
-					/>
-				))}
-			</section>
+			)}
 		</main>
 	);
 }

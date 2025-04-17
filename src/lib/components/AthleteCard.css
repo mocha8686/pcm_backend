@@ -21,6 +21,7 @@
 }
 
 .AthleteCard-portrait {
+	overflow: hidden;
 	grid-area: portrait;
 
 	width: 100%;
@@ -39,6 +40,7 @@
 	color: var(--cl-accent-secondary);
 	text-align: center;
 	text-transform: uppercase;
+	white-space: nowrap;
 }
 
 .AthleteCard-info {
