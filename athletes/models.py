@@ -6,6 +6,7 @@ from django.db import models
 class Athlete(models.Model):
     first_name = models.CharField(max_length=64)
     last_name = models.CharField(max_length=64)
+    image = models.ImageField(upload_to="athletes", blank=True)
     school = models.CharField(max_length=64)
     class_of = models.IntegerField()
     weight_lbs = models.FloatField("Weight (lbs)")
@@ -48,3 +49,12 @@ class SocialAccount(models.Model):
 
     def __str__(self) -> str:
         return f"{self.social_name} ({self.handle})"
+
+class Gallery(models.Model):
+    athlete = models.ForeignKey(
+        Athlete, related_name="galleries", on_delete=models.CASCADE
+    )
+    image = models.ImageField(upload_to="athletes", blank=True)
+
+    def __str__(self) -> str:
+        return self.image

@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Athlete, SocialAccount, Sport, SportStat
+from .models import Athlete, SocialAccount, Sport, SportStat, Gallery
 
 
 class SportStatSerializer(serializers.HyperlinkedModelSerializer):
@@ -22,6 +22,10 @@ class SocialAccountSerializer(serializers.HyperlinkedModelSerializer):
         model = SocialAccount
         fields = ["social_name", "handle"]
 
+class GallerySerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Gallery
+        fields = ["image"]
 
 class AthleteSerializer(serializers.HyperlinkedModelSerializer):
     sports = SportSerializer(many=True, read_only=True)
@@ -32,6 +36,7 @@ class AthleteSerializer(serializers.HyperlinkedModelSerializer):
         fields = [
             "first_name",
             "last_name",
+            "image",
             "school",
             "class_of",
             "weight_lbs",
@@ -41,4 +46,5 @@ class AthleteSerializer(serializers.HyperlinkedModelSerializer):
             "summary",
             "sports",
             "social_accounts",
+            "galleries",
         ]
