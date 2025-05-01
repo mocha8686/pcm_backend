@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.http.request import HttpRequest
 
 from athletes.models import Athlete, SocialAccount, Sport, SportStat
 
@@ -54,6 +55,10 @@ class SportAdmin(admin.ModelAdmin):
     model = SportStat
     fields = ["athlete", "name"]
     inlines = [SportStatInline]
+
+    def has_module_permission(self, request: HttpRequest) -> bool:
+        _ = request
+        return False
 
 
 admin.site.register(Athlete, AthleteAdmin)
