@@ -34,7 +34,7 @@ interface ContactInfoItemProps extends IconProps {
 	to: string;
 }
 
-function ContactInfoItem({ icon, text, to }: ContactInfoItemProps) {
+export function ContactInfoItem({ icon, text, to }: ContactInfoItemProps) {
 	return (
 		<Link className='ContactInfo-item' to={to}>
 			<Icon className='ContactInfo-logo' icon={icon} />

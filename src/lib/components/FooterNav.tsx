@@ -1,6 +1,6 @@
 import type React from 'react';
 import './FooterNav.css';
-import { Link } from 'react-router';
+import { Link, type LinkProps } from 'react-router';
 import Icon from './Icon';
 import clsx from 'clsx';
 
@@ -34,19 +34,16 @@ export default function FooterNav() {
 	);
 }
 
-interface FooterNavItemProps {
-	to: string;
-	className?: string;
-}
+type FooterNavItemProps = LinkProps;
 
 function FooterNavItem({
-	to,
 	className,
 	children,
+	...props
 }: React.PropsWithChildren<FooterNavItemProps>) {
 	return (
 		<li className='FooterNav-item'>
-			<Link className={clsx(className, 'FooterNav-link')} to={to}>
+			<Link className={clsx(className, 'FooterNav-link')} {...props}>
 				{children}
 				<Icon className='FooterNav-icon' icon='tabler:external-link' />
 			</Link>

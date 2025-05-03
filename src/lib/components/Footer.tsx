@@ -1,5 +1,5 @@
 import './Footer.css';
-import logo from '$lib/assets/pcm_white_accent.jpg';
+import logo from '$lib/assets/pcm_accent_transparent.webp';
 import { Link } from 'react-router';
 import ContactForm from './ContactForm';
 import ContactInfo from './ContactInfo';

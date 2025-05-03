@@ -6,14 +6,16 @@ import type React from 'react';
 import { useState } from 'react';
 import clsx from 'clsx';
 
-export default function Navbar() {
+export type NavbarProps = React.ComponentPropsWithoutRef<'nav'>;
+
+export default function Navbar({ className, ...props }: NavbarProps) {
 	const [show, setShow] = useState(false);
 
 	const hide = () => setShow(false);
 	const toggle = () => setShow(!show);
 
 	return (
-		<nav className='Navbar'>
+		<nav className={clsx('Navbar', className)} {...props}>
 			<Link to='/' className='Navbar-logo'>
 				<img
 					src={logo}

@@ -29,7 +29,7 @@ export default function StatCard({
 			<ul className='StatCard-stats'>
 				{stats.map(({ id, name, body }) => (
 					<li key={id} className='StatCard-item'>
-						<h3 className='StatCard-statTitle'>{name}</h3>
+						<h4 className='StatCard-statTitle'>{name}</h4>
 						<p className='StatCard-statBody'>{body}</p>
 					</li>
 				))}

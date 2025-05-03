@@ -5,9 +5,10 @@ import {
 	useQuestionAnswersDispatch,
 } from '$lib/QuestionAnswerContext';
 import clsx from 'clsx';
-import Button from './Button';
+import Button, { type ButtonProps } from './Button';
 import QuestionAnswerEl from './QuestionAnswer';
 import { QuestionAnswerProvider } from './QuestionAnswerProvider';
+import type React from 'react';
 
 export interface QuestionAnswerListProps {
 	list: QuestionAnswer[];
@@ -28,18 +29,16 @@ export default function QuestionAnswerList({ list }: QuestionAnswerListProps) {
 	);
 }
 
-interface QuestionAnswersProps {
-	className?: string;
-}
+type QuestionAnswersProps = React.ComponentPropsWithoutRef<'li'>;
 
-function QuestionAnswers({ className }: QuestionAnswersProps) {
+function QuestionAnswers({ className, ...props }: QuestionAnswersProps) {
 	const questionAnswers = useQuestionAnswers();
 	const dispatch = useQuestionAnswersDispatch();
 
 	return (
 		<>
 			{questionAnswers.map((qa, i) => (
-				<li className='QuestionAnswerList-li' key={qa.id}>
+				<li className='QuestionAnswerList-li' key={qa.id} {...props}>
 					<QuestionAnswerEl
 						question={qa.question}
 						open={qa.open}
@@ -55,11 +54,9 @@ function QuestionAnswers({ className }: QuestionAnswersProps) {
 	);
 }
 
-interface CollapseAllProps {
-	className?: string;
-}
+type CollapseAllProps = Omit<ButtonProps, 'icon'>;
 
-function CollapseAll({ className }: CollapseAllProps) {
+function CollapseAll({ className, ...props }: CollapseAllProps) {
 	const questionAnswers = useQuestionAnswers();
 	const dispatch = useQuestionAnswersDispatch();
 	if (!questionAnswers || !dispatch) return;
@@ -72,6 +69,7 @@ function CollapseAll({ className }: CollapseAllProps) {
 			icon='tabler:chevrons-up'
 			onClick={() => dispatch({ type: 'collapseAll' })}
 			className={clsx(className, show && 'is-visible')}
+			{...props}
 		>
 			Collapse all
 		</Button>

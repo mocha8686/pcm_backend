@@ -33,13 +33,13 @@ if (root) {
 			<BrowserRouter>
 				<ScrollToTop />
 				<Routes>
+					<Route index element={<Home />} />
 					<Route element={<Layout />}>
-						<Route index element={<Home />} />
 						<Route path='/about' element={<About />} />
 						<Route path='/athletes' element={<Athletes />} />
 						<Route path='/contact' element={<Contact />} />
 						<Route path='/components' element={<Components />} />
-						<Route path="/athletes/demo" element={<AthleteProfile />} />
+						<Route path='/athletes/demo' element={<AthleteProfile />} />
 					</Route>
 				</Routes>
 			</BrowserRouter>
