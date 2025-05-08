@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     "hello.apps.HelloConfig",
     "athletes.apps.AthletesConfig",
-    "django.contrib.admin",
+    "pcm_backend.apps.PCMAdminConfig",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
