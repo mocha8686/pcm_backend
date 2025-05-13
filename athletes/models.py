@@ -55,7 +55,7 @@ class Gallery(models.Model):
         Athlete, related_name="galleries", on_delete=models.CASCADE
     )
     image = models.ImageField(upload_to="athletes", blank=True)
-    alt = models.CharField(max_length=128)
+    alt = models.CharField(max_length=128, null=True)
 
     def __str__(self) -> str:
         return self.alt or self.image
