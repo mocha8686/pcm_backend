@@ -15,6 +15,7 @@ class Athlete(models.Model):
     height_inches = models.IntegerField("Height (in)")
     hometown = models.CharField(max_length=64)
     interests = models.TextField("Interests (one per line)")
+    tagline = models.CharField(max_length=64)
     summary = models.TextField()
 
     def __str__(self) -> str:

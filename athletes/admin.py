@@ -54,7 +54,7 @@ class AthleteAdmin(admin.ModelAdmin):
                 ]
             },
         ),
-        (None, {"fields": ["summary"]}),
+        (None, {"fields": ["tagline", "summary"]}),
     ]
     inlines = [SportInline, SocialAccountInline, GalleryInline]
 

@@ -50,6 +50,7 @@ class AthleteSerializer(serializers.HyperlinkedModelSerializer):
             "hometown",
             "interests",
             "summary",
+            "tagline",
             "sports",
             "social_accounts",
             "galleries",
