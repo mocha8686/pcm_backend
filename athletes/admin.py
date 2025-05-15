@@ -35,6 +35,8 @@ class AthleteAdmin(admin.ModelAdmin):
                 "fields": [
                     "first_name",
                     "last_name",
+                    "tags",
+                    "position",
                     "weight_lbs",
                     "height_inches",
                 ]
