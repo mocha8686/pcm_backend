@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from athletes.models import Athlete, SocialAccount, Sport, SportStat
+from athletes.models import Athlete, Gallery, SocialAccount, Sport, SportStat
 
 # Register your models here.
 
@@ -18,6 +18,11 @@ class SportStatInline(admin.StackedInline):
 
 class SocialAccountInline(admin.TabularInline):
     model = SocialAccount
+    extra = 1
+
+class GalleryInline(admin.StackedInline):
+    model = Gallery
+    verbose_name = "Gallery Image"
     extra = 1
 
 
@@ -47,7 +52,7 @@ class AthleteAdmin(admin.ModelAdmin):
         ),
         (None, {"fields": ["summary"]}),
     ]
-    inlines = [SportInline, SocialAccountInline]
+    inlines = [SportInline, SocialAccountInline, GalleryInline]
 
 
 class SportAdmin(admin.ModelAdmin):
