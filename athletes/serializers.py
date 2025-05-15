@@ -41,6 +41,7 @@ class AthleteSerializer(serializers.HyperlinkedModelSerializer):
             "first_name",
             "last_name",
             "tags",
+            "position",
             "image",
             "school",
             "class_of",
