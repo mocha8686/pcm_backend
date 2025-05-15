@@ -6,7 +6,7 @@ from .models import Athlete, SocialAccount, Sport, SportStat, Gallery
 class SportStatSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = SportStat
-        fields = ["header", "body"]
+        fields = ["id", "header", "body"]
 
 
 class SportSerializer(serializers.HyperlinkedModelSerializer):
@@ -14,13 +14,13 @@ class SportSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Sport
-        fields = ["name", "icon", "stats"]
+        fields = ["id", "name", "icon", "stats"]
 
 
 class SocialAccountSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = SocialAccount
-        fields = ["social_name", "handle"]
+        fields = ["id", "social_name", "handle"]
 
 
 class GallerySerializer(serializers.HyperlinkedModelSerializer):
