@@ -26,7 +26,7 @@ class SocialAccountSerializer(serializers.HyperlinkedModelSerializer):
 class GallerySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Gallery
-        fields = ["image"]
+        fields = ["id", "image", "alt"]
 
 
 class AthleteSerializer(serializers.HyperlinkedModelSerializer):
