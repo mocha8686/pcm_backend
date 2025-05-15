@@ -6,6 +6,7 @@ from django.db import models
 class Athlete(models.Model):
     first_name = models.CharField(max_length=64)
     last_name = models.CharField(max_length=64)
+    tags = models.TextField("Tags (one per line)")
     image = models.ImageField(upload_to="athletes", blank=True)
     school = models.CharField(max_length=64)
     class_of = models.IntegerField()

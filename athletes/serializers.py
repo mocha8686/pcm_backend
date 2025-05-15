@@ -39,6 +39,7 @@ class AthleteSerializer(serializers.HyperlinkedModelSerializer):
         fields = [
             "first_name",
             "last_name",
+            "tags",
             "image",
             "school",
             "class_of",
