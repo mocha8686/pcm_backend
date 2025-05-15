@@ -9,6 +9,7 @@ from athletes.models import Athlete, Gallery, SocialAccount, Sport, SportStat
 class SportInline(admin.TabularInline):
     model = Sport
     extra = 1
+    fields = ["name", "icon"]
     show_change_link = True
 
 
@@ -20,6 +21,7 @@ class SportStatInline(admin.StackedInline):
 class SocialAccountInline(admin.TabularInline):
     model = SocialAccount
     extra = 1
+
 
 class GalleryInline(admin.StackedInline):
     model = Gallery
