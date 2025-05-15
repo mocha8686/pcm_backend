@@ -22,14 +22,17 @@ class SocialAccountSerializer(serializers.HyperlinkedModelSerializer):
         model = SocialAccount
         fields = ["social_name", "handle"]
 
+
 class GallerySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Gallery
         fields = ["image"]
 
+
 class AthleteSerializer(serializers.HyperlinkedModelSerializer):
     sports = SportSerializer(many=True, read_only=True)
     social_accounts = SocialAccountSerializer(many=True, read_only=True)
+    galleries = GallerySerializer(many=True, read_only=True)
 
     class Meta:
         model = Athlete
