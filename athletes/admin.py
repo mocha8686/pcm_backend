@@ -39,6 +39,7 @@ class AthleteAdmin(admin.ModelAdmin):
                     "position",
                     "weight_lbs",
                     "height_inches",
+                    "image",
                 ]
             },
         ),
