@@ -61,7 +61,7 @@ class AthleteAdmin(admin.ModelAdmin):
 
 class SportAdmin(admin.ModelAdmin):
     model = SportStat
-    fields = ["athlete", "name"]
+    fields = ["athlete", "name", "icon"]
     inlines = [SportStatInline]
 
     def has_module_permission(self, request: HttpRequest) -> bool:

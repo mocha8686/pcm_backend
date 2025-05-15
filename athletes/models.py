@@ -25,6 +25,7 @@ class Sport(models.Model):
     athlete = models.ForeignKey(
         Athlete, related_name="sports", on_delete=models.CASCADE
     )
+    icon = models.CharField(max_length=64)
     name = models.CharField(max_length=64)
 
     def __str__(self) -> str:
